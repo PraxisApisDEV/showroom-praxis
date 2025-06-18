@@ -1,0 +1,135 @@
+{
+    "products": [
+        {
+            "info": {
+                "title": "RecognizeMe",
+                "description": "RecognizeMe es una plataforma avanzada que utiliza inteligencia artificial para el análisis en tiempo real de imágenes y videos, detectando objetos, productos y personas con alta precisión a través de cámaras. La plataforma aprende y evoluciona continuamente para optimizar procesos y adaptarse a las necesidades específicas de cada negocio. Permite entrenar modelos personalizados de inteligencia artificial, evitando soluciones genéricas y ofreciendo notificaciones, alertas, análisis estadísticos y predicciones que facilitan la toma de decisiones.",
+                "image": ""
+            },
+            "video": {
+                "url": ""
+            },
+            "pdf": {
+                "qrImage": "resource/pdf/RecognizeMe.pdf"
+            },
+            "form": {
+                "url": ""
+            }
+        },
+		
+		{
+            "info": {
+                "title": "Chatbot",
+                "description": "Es un asistente virtual inteligente impulsado por inteligencia artificial conversacional avanzada, diseñado para interactuar con los clientes de manera eficiente y efectiva a través de múltiples canales digitales. Ofrece respuestas dinámicas y personalizadas, contando con la capacidad de aprendizaje continuo a partir de interacciones previas.",
+                "image": ""
+            },
+            "video": {
+                "url": ""
+            },
+            "pdf": {
+                "qrImage": ""
+            },
+            "form": {
+                "url": ""
+            }
+        },
+		
+		{
+            "info": {
+                "title": "CMPay",
+                "description": "CMPay es la terminal de punto de venta de marca blanca y adaptable que centraliza y gestiona todos tus métodos de cobro en un solo dispositivo. Olvídate de la complejidad de múltiples equipos; CMPay funciona como un switch de pagos escalable y seguro, diseñado para integrarse a la perfección con tus sistemas internos y el flujo operativo de tu negocio. Gracias a su arquitectura modular, CMPay va más allá de ser una simple terminal. Te permite añadir funcionalidades específicas según las necesidades de tu sector, asegurando que la experiencia de cobro sea coherente con la identidad de tu marca. Simplifica, personaliza y optimiza tus cobros con CMPay: la solución de pago que evoluciona contigo.",
+                "image": "resource/background/cmpay_back.jpg"
+            },
+            "video": {
+                "url": "resource/video/CobroMovil-Terminal-p1.mp4"
+            },
+            "pdf": {
+                "qrImage": "resource/pdf/BROCHURE-CobroMovil-2.9.pdf"
+            },
+            "form": {
+                "url": "https://mexico.praxisglobe.com/contacto.html"
+            }
+        },
+		{
+            "info": {
+                "title": "Chaski",
+                "description": "Chaski es una solución de mensajería multicanal y omnicanal diseñada para centralizar y optimizar tus comunicaciones con clientes a través de SMS, Email, WhatsApp y Notificaciones. Ofrecemos plantillas dinámicas y personalizables que se adaptan automáticamente a cada canal, manteniendo la consistencia de tu marca y asegurando una experiencia de cliente coherente y de alto impacto, maximizando la efectividad de tus campañas y construyendo relaciones más sólidas. Chaski facilita la coordinación y seguimiento de comunicaciones en entornos organizacionales complejos o de alto volumen.",
+                "image": ""
+            },
+            "video": {
+                "url": ""
+            },
+            "pdf": {
+                "qrImage": "resource/pdf/OnePage-Chaski.pdf"
+            },
+            "form": {
+                "url": ""
+            }
+        },
+		{
+            "info": {
+                "title": "Firma Digital",
+                "description": "Nuestra Firma Digital es una solución integral que garantiza la autenticidad, integridad y validez legal de tus documentos digitales. Cumple con estándares como: FIEL (SAT) y NOM-151-SCFI-2016, y se diferencia por integrar la firma biométrica (huella/facial), ofreciendo una capa superior de seguridad y no repudio para una identidad inconfundible en cada transacción. Permite automatizar la firma de contratos y documentos ofreciendo agilidad, seguridad y cumplimiento normativo en entornos digitales asi como en múltiples industrias como la legal, sanitaria, gubernamental, financiera y la cadena de suministro.Todo esto dentro de un entorno comercial o laboral.",
+                "image": ""
+            },
+            "video": {
+                "url": "resource/video/Funcional-FirmaDigital.mp4"
+            },
+            "pdf": {
+                "qrImage": ""
+            },
+            "form": {
+                "url": ""
+            }
+        },
+		{
+            "info": {
+                "title": "Api Connect",
+                "description": "Plataforma centralizada que ofrece un conjunto de APIs especializadas para optimizar procesos críticos de validación, cumplimiento y certificación digital. Diseñado para integrarse fácilmente con tus sistemas y listo para acelerar la transformación digital de tu empresa, asegurando agilidad, seguridad y cumplimiento normativo.",
+                "image": ""
+            },
+            "video": {
+                "url": ""
+            },
+            "pdf": {
+                "qrImage": "resource/pdf/APIS.pdf"
+            },
+            "form": {
+                "url": ""
+            }
+        },
+		{
+            "info": {
+                "title": "Onboarding",
+                "description": "Nuestra plataforma ofrece diversas soluciónes integrales que unifican y automatizan cada etapa del onboarding digital: desde la captura y verificación de identidad,la evaluacion de riesgo o cumplimiento, hasta llegar a la firma electronica.Agilizando los procesos de KYC (Know Your Customer), KYB (Know Your Business), KYE (Know Your Employee) y KYP (Know Your Partner). Automatizando la incorporación de clientes, empresas y colaboradores con máxima seguridad, eficiencia y cumplimiento regulatorio.",
+                "image": ""
+            },
+            "video": {
+                "url": "resource/video/Comercial-OnboardingDigital-Empleados.mp4"
+            },
+            "pdf": {
+                "qrImage": ""
+            },
+            "form": {
+                "url": ""
+            }
+        },
+		{
+            "info": {
+                "title": "Marketplace",
+                "description": "Marketplace es una plataforma digital que permite exhibir, vender y gestionar productos o servicios en línea desde un solo lugar. Funciona para modelos de negocio B2C (empresa a consumidor) y B2B (empresa a empresa). Con Marketplace, puedes crear y personalizar tu propio ecosistema de comercio digital en una plataforma 100% trazable y simple. Está diseñada para ofrecer una experiencia fluida y amigable tanto para compradores como para vendedores.",
+                "image": ""
+            },
+            "video": {
+                "url": ""
+            },
+            "pdf": {
+                "qrImage": "resource/pdf/MarketPlace.pdf"
+            },
+            "form": {
+                "url": ""
+            }
+        }
+		
+    ]
+}

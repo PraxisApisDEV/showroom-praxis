@@ -1,0 +1,23 @@
+{
+  
+  "name": "showroom-praxis",
+  
+  "version": "1.0.0",
+  
+  "type": "module",
+  
+  "main": "app.js",
+  
+  "dependencies": {
+  
+    
+  "@babylonjs/core": "^8.10.0",
+  
+    
+  "@babylonjs/gui": "^8.10.0",
+  
+    
+  "showroom-praxis": "file:"
+  
+  }
+}
