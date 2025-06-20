@@ -18,15 +18,28 @@ var createScene = async function() {
              function createSceneM() {                            
            
                 createSuelo(sceneMain);          
-
-                createMuroPrincipal(-12,sceneMain);
+                
+                createMuroMadera(-24,sceneMain);
+                createMuroPrincipal(-20,5,0,sceneMain);                
+                createMuroMadera(-16,sceneMain);
+                createMuroPrincipal(-12,5,0,sceneMain);                
                 createMuroMadera(-8,sceneMain);
-                createMuroPrincipal(-4,sceneMain);            
+                createMuroPrincipal(-4,5,0,sceneMain);            
                 //createMuroPrincipal(0,sceneMAin);
                 createMuroMadera(0,sceneMain);
-                createMuroPrincipal(4,sceneMain);
+                createMuroPrincipal(4,5,0,sceneMain);
                 createMuroMadera(8,sceneMain);
-                createMuroPrincipal(12,sceneMain);
+                createMuroPrincipal(12,5,0,sceneMain);
+                createMuroMadera(16,sceneMain);
+                createMuroPrincipal(20,5,0,sceneMain);
+                createMuroMadera(24,sceneMain);
+                createMuroPrincipal(28,5,0,sceneMain);
+                createMuroMadera(32,sceneMain);
+
+                //createMuroPrincipal(-12,5,-15,sceneMain);
+                //createMuroPrincipal(-4,5,-15,sceneMain); 
+                //createMuroPrincipal(4,5,-15,sceneMain);
+                //createMuroPrincipal(12,5,-15,sceneMain);
 
                 // 0,4,2
                 console.log("JSON-- stand.logo:", standCMpay.logo);
@@ -192,7 +205,7 @@ var createScene = async function() {
         localAxes.zAxis.parent = ground;
     }
 
-    const createMuroPrincipal = function (positionX,scene) {
+    const createMuroPrincipal = function (positionX,posicionY,posicionZ,scene) {
         // Create a basic wall (box)          
             const wall = BABYLON.MeshBuilder.CreateBox("wall", {width: 4, height: 10, depth: 0.4},scene);
 
@@ -213,8 +226,8 @@ var createScene = async function() {
 
             // Position the wall
             wall.position.x = positionX; // Example position
-            wall.position.y = 5; // Example position
-            wall.position.z = 0; // Example position
+            wall.position.y = posicionY; // Example position
+            wall.position.z = posicionZ; // Example position
 
     }
 
@@ -263,11 +276,11 @@ var createScene = async function() {
 
     var createMuroLogo = function (positionX,positionY,positionZ,srcImg, scene) {
        
-        var hdrTexture = new BABYLON.HDRCubeTexture(
-            "https://dl.dropbox.com/s/6eyb6pgqiq43xbz/this.hdr",
-            scene,512
-        );
-        hdrTexture.level = 1;
+        //var hdrTexture = new BABYLON.HDRCubeTexture(
+        //    "https://dl.dropbox.com/s/6eyb6pgqiq43xbz/this.hdr",
+        //    scene,512
+        //);
+        //hdrTexture.level = 1;
 
         var faceUV = new Array(6);
         for (var i = 0; i < 6; i++) {
@@ -285,7 +298,7 @@ var createScene = async function() {
         var cubeTexture = new BABYLON.Texture(srcImg,scene)
         var cubeMat= new BABYLON.PBRMaterial("cubeMaterial",scene);
         cubeMat.albedoTexture = cubeTexture;
-        cubeMat.reflectionTexture = hdrTexture;
+        //cubeMat.reflectionTexture = hdrTexture;
         cubeMat.roughness = 1;
         cubeMat.metallic = 0;        
         //cubeMat.alpha = 0.7;   // Transparencia
