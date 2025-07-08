@@ -41,7 +41,7 @@
                 "image": "resource/background/cmpay_back.jpg"
             },
             "video": {
-                "url": "resource/video/CobroMovil-Terminal-p1.mp4"
+                "url": "resource/video/CobroMovil-Web.mp4"
             },
             "pdf": {
                 "qrImage": "resource/pdf/BROCHURE-CobroMovil-2.9.pdf"

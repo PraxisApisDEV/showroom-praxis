@@ -1,0 +1,110 @@
+{
+	"categorias":[
+		{
+			"titulo":"PROCESOS DE NEGOCIO",
+			"imagen":"",
+			"productos": [
+				{					
+					"title": "Onboarding",  
+					"description": "Nuestra plataforma ofrece diversas soluciónes integrales que unifican y automatizan cada etapa del onboarding digital: desde la captura y verificación de identidad,la evaluacion de riesgo o cumplimiento, hasta llegar a la firma electronica.Agilizando los procesos de KYC (Know Your Customer), KYB (Know Your Business), KYE (Know Your Employee) y KYP (Know Your Partner).\n\n Automatizando la incorporación de clientes, empresas y colaboradores con máxima seguridad, eficiencia y cumplimiento regulatorio.",
+					"icono": "",					
+					"videoUrl": "resource/video/Comercial-OnboardingDigital-Empleados.mp4",
+					"onePageQr": "resource/qr/CMPay-onePage.png",
+					"formQr": "resource/qr/Praxis-FormContacto.png"
+				},
+				{					
+					"title": "Compliance",   
+					"description": "Descripcion compliance...",
+					"icono": "",					
+					"videoUrl": "resource/video/CobroMovil-Terminal-p1.mp4",
+					"onePageQr": "resource/qr/CMPay-onePage.png",
+					"formQr": "resource/qr/APIPlat-FormContacto.png"
+				},
+				{					
+					"title": "Gestión del riesgo",
+					"description": "Descripcion Gestion de riesgo...",
+					"icono": "",					
+					"videoUrl": "resource/video/Funcional-FirmaDigital.mp4",
+					"onePageQr": "resource/qr/CMPay-onePage.png",
+					"formQr": "resource/qr/APIPlat-FormContacto.png"
+				},
+				{					
+					"title": "Firma Digital",  
+					"description": "Nuestra Firma Digital es una solución integral que garantiza la autenticidad, integridad y validez legal de tus documentos digitales. Cumple con estándares como: FIEL (SAT) y NOM-151-SCFI-2016, y se diferencia por integrar la firma biométrica (huella/facial), ofreciendo una capa superior de seguridad y no repudio para una identidad inconfundible en cada transacción. Permite automatizar la firma de contratos y documentos ofreciendo agilidad, seguridad y cumplimiento normativo en entornos digitales asi como en múltiples industrias como la legal, sanitaria, gubernamental, financiera y la cadena de suministro.Todo esto dentro de un entorno comercial o laboral.",
+					"icono": "",					
+					"videoUrl": "resource/video/Funcional-FirmaDigital.mp4",
+					"onePageQr": "resource/qr/CMPay-onePage.png",
+					"formQr": "resource/qr/APIPlat-FormContacto.png"
+				}				
+			]
+		},
+		{
+			"titulo":"E-COMERCE Y SEGURIDAD",
+			"imagen":"",
+			"productos":[
+				{					
+					"title": "Venta Digital",   
+					"description": "Marketplace es una plataforma digital que permite exhibir, vender y gestionar productos o servicios en línea desde un solo lugar. Funciona para modelos de negocio B2C (empresa a consumidor) y B2B (empresa a empresa). Con Marketplace, puedes crear y personalizar tu propio ecosistema de comercio digital en una plataforma 100% trazable y simple. Está diseñada para ofrecer una experiencia fluida y amigable tanto para compradores como para vendedores.",
+					"icono": "",					
+					"videoUrl": "",
+					"onePageQr": "resource/pdf/MarketPlace.pdf",
+					"formQr": ""
+				},
+				{					
+					"title": "Mensajería y Alertas", 
+					"description": "Chaski es una solución de mensajería multicanal y omnicanal diseñada para centralizar y optimizar tus comunicaciones con clientes a través de SMS, Email, WhatsApp y Notificaciones. Ofrecemos plantillas dinámicas y personalizables que se adaptan automáticamente a cada canal, manteniendo la consistencia de tu marca y asegurando una experiencia de cliente coherente y de alto impacto, maximizando la efectividad de tus campañas y construyendo relaciones más sólidas. Chaski facilita la coordinación y seguimiento de comunicaciones en entornos organizacionales complejos o de alto volumen.",
+					"icono": "",					
+					"videoUrl": "",
+					"onePageQr": "resource/pdf/OnePage-Chaski.pdf",
+					"formQr": ""
+				},
+				{					
+					"title": "IA Conversacional", 
+					"description": "Chaski es una solución de mensajería multicanal y omnicanal diseñada para centralizar y optimizar tus comunicaciones con clientes a través de SMS, Email, WhatsApp y Notificaciones. Ofrecemos plantillas dinámicas y personalizables que se adaptan automáticamente a cada canal, manteniendo la consistencia de tu marca y asegurando una experiencia de cliente coherente y de alto impacto, maximizando la efectividad de tus campañas y construyendo relaciones más sólidas. Chaski facilita la coordinación y seguimiento de comunicaciones en entornos organizacionales complejos o de alto volumen.",
+					"icono": "",					
+					"videoUrl": "",
+					"onePageQr": "",
+					"formQr": ""
+				},
+				{					
+					"title": "Reconocimiento de Imágenes", 
+					"description": "RecognizeMe es una plataforma avanzada que utiliza inteligencia artificial para el análisis en tiempo real de imágenes y videos, detectando objetos, productos y personas con alta precisión a través de cámaras. La plataforma aprende y evoluciona continuamente para optimizar procesos y adaptarse a las necesidades específicas de cada negocio. Permite entrenar modelos personalizados de inteligencia artificial, evitando soluciones genéricas y ofreciendo notificaciones, alertas, análisis estadísticos y predicciones que facilitan la toma de decisiones.",
+					"icono": "",					
+					"videoUrl": "",
+					"onePageQr": "resource/pdf/RecognizeMe.pdf",
+					"formQr": ""
+				}
+			]
+		},
+		{
+			"titulo":"OPERACIONES COMERCIALES",
+			"imagen":"",
+			"productos":[
+				{					
+					"title": "Puntos de venta",  
+					"description": "- CMPay es la terminal de punto de venta de marca blanca y adaptable que centraliza y gestiona todos tus métodos de cobro en un solo dispositivo. Olvídate de la complejidad de múltiples equipos; CMPay funciona como un switch de pagos escalable y seguro, diseñado para integrarse a la perfección con tus sistemas internos y el flujo operativo de tu negocio.\n\nGracias a su arquitectura modular, CMPay va más allá de ser una simple terminal. Te permite añadir funcionalidades específicas según las necesidades de tu sector, asegurando que la experiencia de cobro sea coherente con la identidad de tu marca. Simplifica, personaliza y optimiza tus cobros con CMPay: la solución de pago que evoluciona contigo.",
+					"icono": "resource/iconos/info.png",					
+					"videoUrl": "resource/video/CobroMovil-Web.mp4",
+					"onePageQr": "resource/qr/CMPay-onePage.png",
+					"formQr": "resource/qr/Praxis-FormContacto.png"
+				},
+				{					
+					"title": "Gestión de inventarios",
+					"description": "- Descripcion gestion de inventarios...",
+					"icono": "resource/iconos/form.png",					
+					"videoUrl": "resource/video/Comercial-OnboardingDigital-Empleados.mp4",
+					"onePageQr": "resource/qr/CMPay-onePage.png",
+					"formQr": "resource/qr/APIPlat-FormContacto.png"
+				},
+				{					
+					"title": "Facturación",
+					"description": "- Descripcion de facturacion...",
+					"icono": "",					
+					"videoUrl": "resource/video/demo-video.mp4",
+					"onePageQr": "resource/qr/CMPay-onePage.png",
+					"formQr": "resource/qr/APIPlat-FormContacto.png"
+				}
+			]
+		}
+	]
+}
