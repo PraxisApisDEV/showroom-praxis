@@ -46,32 +46,32 @@
 					"title": "Venta Digital",   
 					"description": "Marketplace es una plataforma digital que permite exhibir, vender y gestionar productos o servicios en línea desde un solo lugar. Funciona para modelos de negocio B2C (empresa a consumidor) y B2B (empresa a empresa). Con Marketplace, puedes crear y personalizar tu propio ecosistema de comercio digital en una plataforma 100% trazable y simple. Está diseñada para ofrecer una experiencia fluida y amigable tanto para compradores como para vendedores.",
 					"icono": "",					
-					"videoUrl": "resource/video/CobroMovil-Terminal-p1.mp4",
-					"onePageQr": "resource/qr/CMPay-onePage.png",
-					"formQr": "resource/qr/APIPlat-FormContacto.png"
+					"videoUrl": "./resource/video/CobroMovil-Terminal-p1.mp4",
+					"onePageQr": "./resource/qr/CMPay-onePage.png",
+					"formQr": "./resource/qr/APIPlat-FormContacto.png"
 				},
 				{					
 					"title": "Mensajería y Alertas", 
 					"description": "Chaski es una solución de mensajería multicanal y omnicanal diseñada para centralizar y optimizar tus comunicaciones con clientes a través de SMS, Email, WhatsApp y Notificaciones. Ofrecemos plantillas dinámicas y personalizables que se adaptan automáticamente a cada canal, manteniendo la consistencia de tu marca y asegurando una experiencia de cliente coherente y de alto impacto, maximizando la efectividad de tus campañas y construyendo relaciones más sólidas. Chaski facilita la coordinación y seguimiento de comunicaciones en entornos organizacionales complejos o de alto volumen.",
 					"icono": "",					
-					"videoUrl": "resource/video/api-conect_ok.mp4",
-					"onePageQr": "resource/qr/CMPay-onePage.png",
-					"formQr": "resource/qr/Praxis-FormContacto.png"
+					"videoUrl": "./resource/video/api-conect_ok.mp4",
+					"onePageQr": "./resource/qr/CMPay-onePage.png",
+					"formQr": "./resource/qr/Praxis-FormContacto.png"
 				},
 				{					
 					"title": "IA Conversacional", 
 					"description": "Chaski es una solución de mensajería multicanal y omnicanal diseñada para centralizar y optimizar tus comunicaciones con clientes a través de SMS, Email, WhatsApp y Notificaciones. Ofrecemos plantillas dinámicas y personalizables que se adaptan automáticamente a cada canal, manteniendo la consistencia de tu marca y asegurando una experiencia de cliente coherente y de alto impacto, maximizando la efectividad de tus campañas y construyendo relaciones más sólidas. Chaski facilita la coordinación y seguimiento de comunicaciones en entornos organizacionales complejos o de alto volumen.",
 					"icono": "",					
-					"videoUrl": "resource/video/demo-video.mp4",
-					"onePageQr": "resource/qr/CMPay-onePage.png",
-					"formQr": "resource/qr/APIPlat-FormContacto.png"
+					"videoUrl": "./resource/video/demo-video.mp4",
+					"onePageQr": "./resource/qr/CMPay-onePage.png",
+					"formQr": "./resource/qr/APIPlat-FormContacto.png"
 				},
 				{					
 					"title": "Reconocimiento de Imágenes", 
 					"description": "RecognizeMe es una plataforma avanzada que utiliza inteligencia artificial para el análisis en tiempo real de imágenes y videos, detectando objetos, productos y personas con alta precisión a través de cámaras. La plataforma aprende y evoluciona continuamente para optimizar procesos y adaptarse a las necesidades específicas de cada negocio. Permite entrenar modelos personalizados de inteligencia artificial, evitando soluciones genéricas y ofreciendo notificaciones, alertas, análisis estadísticos y predicciones que facilitan la toma de decisiones.",
 					"icono": "",					
-					"videoUrl": "resource/video/CobroMovil-Terminal-p1.mp4",
-					"onePageQr": "resource/pdf/RecognizeMe.pdf",
+					"videoUrl": "./resource/video/CobroMovil-Terminal-p1.mp4",
+					"onePageQr": "./resource/pdf/RecognizeMe.pdf",
 					"formQr": ""
 				}
 			]
@@ -83,26 +83,26 @@
 				{					
 					"title": "Puntos de venta",  
 					"description": "- CMPay es la terminal de punto de venta de marca blanca y adaptable que centraliza y gestiona todos tus métodos de cobro en un solo dispositivo. Olvídate de la complejidad de múltiples equipos; CMPay funciona como un switch de pagos escalable y seguro, diseñado para integrarse a la perfección con tus sistemas internos y el flujo operativo de tu negocio.\n\nGracias a su arquitectura modular, CMPay va más allá de ser una simple terminal. Te permite añadir funcionalidades específicas según las necesidades de tu sector, asegurando que la experiencia de cobro sea coherente con la identidad de tu marca. Simplifica, personaliza y optimiza tus cobros con CMPay: la solución de pago que evoluciona contigo.",
-					"icono": "resource/iconos/info.png",					
-					"videoUrl": "resource/video/CobroMovil-Web.mp4",
-					"onePageQr": "resource/qr/CMPay-onePage.png",
-					"formQr": "resource/qr/Praxis-FormContacto.png"
+					"icono": "./resource/iconos/info.png",					
+					"videoUrl": "./resource/video/CobroMovil-Web.mp4",					             					
+					"onePageQr": "./resource/qr/CMPay-onePage.png",
+					"formQr": "./resource/qr/Praxis-FormContacto.png"
 				},
 				{					
 					"title": "Gestión de inventarios",
 					"description": "- Descripcion gestion de inventarios...",
-					"icono": "resource/iconos/form.png",					
-					"videoUrl": "resource/video/Comercial-OnboardingDigital-Empleados.mp4",
-					"onePageQr": "resource/qr/CMPay-onePage.png",
-					"formQr": "resource/qr/APIPlat-FormContacto.png"
+					"icono": "./resource/iconos/form.png",					
+					"videoUrl": "./resource/video/Comercial-OnboardingDigital-Empleados.mp4",					
+					"onePageQr": "./resource/qr/CMPay-onePage.png",
+					"formQr": "./resource/qr/APIPlat-FormContacto.png"
 				},
 				{					
 					"title": "Facturación",
 					"description": "- Descripcion de facturacion...",
 					"icono": "",					
-					"videoUrl": "resource/video/demo-video.mp4",
-					"onePageQr": "resource/qr/CMPay-onePage.png",
-					"formQr": "resource/qr/APIPlat-FormContacto.png"
+					"videoUrl": "./resource/video/demo-video.mp4",					             
+					"onePageQr": "./resource/qr/CMPay-onePage.png",
+					"formQr": "./resource/qr/APIPlat-FormContacto.png"
 				}
 			]
 		}
