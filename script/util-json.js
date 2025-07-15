@@ -1,11 +1,11 @@
-const jsonCategoriasURL = "resource/json/categoria-productos.json";
+const jsonCategoriasURL = "./resource/json/categoria-productos.json";
 var standProcesoDeNegocio = "";
 var standEcomerceSeguridad = "";
 var standOperacionesComerciales = "";
 
 
 
-const jsonProductsURL = "resource/json/products.json";
+const jsonProductsURL = "./resource/json/products.json";
 var productRecognizeMe = "";
 var productChatbot = "";
 var productCMpay = "";

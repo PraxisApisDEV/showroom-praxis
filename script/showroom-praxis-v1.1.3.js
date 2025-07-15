@@ -15,6 +15,8 @@ var createScene = async function() {
 
         // Escena Detalle de Producto
         var scene1 = new BABYLON.Scene(engine);
+        var scene2 = new BABYLON.Scene(engine);
+        var scene3 = new BABYLON.Scene(engine);
 
             createArcRotateCamera(sceneMain);
             createLight(sceneMain); 
@@ -25,20 +27,12 @@ var createScene = async function() {
 
              function createSceneM() {                            
            
-                createSuelo(sceneMain);         
-                
-                
-                //createMuroPrincipal(-12,5,0,sceneMain);                
-                //createMuroMadera(-8,sceneMain);
-                //createMuroPrincipal(-4,5,0,sceneMain);  
-                //createMuroPrincipal(0,sceneMAin);
-                //createMuroMadera(0,sceneMain);
-                //createMuroPrincipal(4,5,0,sceneMain);
+                createSuelo(sceneMain);  
 
-                createMuroPrincipal("resource/background/home_praxis_mexico.png",70,35,0.4,0,8,25,sceneMain);
+                createMuroPrincipal("./resource/background/home_praxis_mexico.png",70,35,0.4,0,8,25,sceneMain);
 
                 //var muroTexto1 = createMuroTexto("wall1",standProcesoDeNegocio.titulo,-8,5,0,sceneMain);
-                var muroTexto1 = createMuroPrincipal("resource/background/totem1.png",
+                var muroTexto1 = createMuroPrincipal("./resource/background/totem1.png",
                     5,10,0.4,
                     -8,5,0,sceneMain);
                 createSombraAObj(muroTexto1,genSombra);
@@ -50,11 +44,11 @@ var createScene = async function() {
                     currentScene = scenes[1];
                     console.log("IHM - Entra a detalle");                    
                     //createSceneD(standOperacionesComerciales.productos);
-                    createStand(standProcesoDeNegocio,scene1);                    
+                    createStand(standProcesoDeNegocio,currentScene);                    
                 }));*/
 
                 //var muroTexto2 = createMuroTexto("wall2",standEcomerceSeguridad.titulo,0,5,0,sceneMain);
-                var muroTexto2 = createMuroPrincipal("resource/background/totem2.png",
+                var muroTexto2 = createMuroPrincipal("./resource/background/totem2.png",
                     5,10,0.4,
                     0,5,0,sceneMain);
                 createSombraAObj(muroTexto2,genSombra);
@@ -62,14 +56,14 @@ var createScene = async function() {
                 //console.log("JSON-- stand.productos.length:", standEcomerceSeguridad.productos.length);             
                 /*muroTexto2.actionManager = new BABYLON.ActionManager(sceneMain);
                 muroTexto2.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {                                        
-                    currentScene = scenes[1];
+                    currentScene = scenes[2];
                     console.log("IHM - Entra a detalle");                    
                     //createSceneD(standOperacionesComerciales.productos);
-                    createStand(standEcomerceSeguridad,scene1);                    
+                    createStand(standEcomerceSeguridad,currentScene);                    
                 }));*/
                 
                 //var muroTexto3 = createMuroTexto("wall3",standOperacionesComerciales.titulo,8,5,0,sceneMain);
-                var muroTexto3 = createMuroPrincipal("resource/background/totem3.png",
+                var muroTexto3 = createMuroPrincipal("./resource/background/totem3.png",
                     5,10,0.4,
                     8,5,0,sceneMain);
                 createSombraAObj(muroTexto3,genSombra);
@@ -84,41 +78,16 @@ var createScene = async function() {
                     console.log("JSON-- productos.onePageQr: ",standOperacionesComerciales.productos[i].onePageQr);                    
                     console.log("JSON-- productos.formQr: ",standOperacionesComerciales.productos[i].formQr);                    
                 }*/
-                                
+                       
+                
                 muroTexto3.actionManager = new BABYLON.ActionManager(sceneMain);
                 muroTexto3.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {                                        
-                    currentScene = scenes[1];
+                    currentScene = scenes[3];
                     console.log("IHM - Entra a detalle");                    
                     //createSceneD(standOperacionesComerciales.productos);
-                    createStand(standOperacionesComerciales,scene1);                    
-                }));
+                    createStand(standOperacionesComerciales,currentScene);                    
+                })); 
 
-                
-
-                /*
-                var muroCMPay = createMuroLogo(0,5,-2,standCMpay.logo,sceneMain);
-                muroCMPay.actionManager = new BABYLON.ActionManager(sceneMain);
-                muroCMPay.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {                                        
-                    //currentScene = scenes[1];
-
-                    createStand(productCMpay,sceneMain);
-                }));
-                
-                console.log("JSON-- stand.logo:", standChaski.logo);
-                //"resource/logos/chaski.png"
-                var muroChasky = createMuroLogo(-8,5,-2,standChaski.logo,sceneMain);
-                muroChasky.actionManager = new BABYLON.ActionManager(sceneMain);
-                muroChasky.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {
-                    createStand(productChaski,sceneMain);
-                }));
-
-                console.log("JSON-- stand.logo:", standFirmaDigital.logo);
-                var muroFirma = createMuroLogo(8,5,-2,standFirmaDigital.logo,sceneMain);
-                muroFirma.actionManager = new BABYLON.ActionManager(sceneMain);
-                muroFirma.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {
-                    createStand(productFirmaDigital,sceneMain);
-                }));
-                */
 
                 //-----------------> INI TEXTO 
                 // createTextoFijo("PRODUCTOS DIGITALES - Praxis");
@@ -155,55 +124,14 @@ var createScene = async function() {
                 }
             });           
             
-            
-
-            //var camara = createArcRotateCamera(scene1);                        
-            var camara = createFreeCamera(scene1);
-            camara.setPosition = new BABYLON.Vector3(Math.PI /2, Math.PI /2, 70);
-
-            createLight(scene1); 
-            
-            createSuelo(scene1);
-
-            /*
-            function createSceneD(productos){
-                var advancedTexture1 = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI", true, scene1);
-
-                //Main menu button
-                var button1 = BABYLON.GUI.Button.CreateSimpleButton("button1", "Home");
-                button1.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
-                button1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
-                button1.width = '100px';
-                button1.height = "40px";
-                button1.color = "white";
-                button1.background = "gray";
-                button1.cornerRadius = "10";
-                button1.paddingBottom = "10px";
-                button1.top = "20px";
-                button1.left = "20px";
-                advancedTexture1.addControl(button1);
-
-                button1.onPointerUpObservable.add(function () {      
-                    currentScene = scenes[0];
-                    //advancedTexture1.removeControl(videoProducto);
-                    advancedTexture1.dispose(); 
-                    //currentScene.render();                   
-                    console.log("IHM - regresar a Home");                                     
-                });
-
-                console.log("IHM Detalle - ",productos[0]);
-            }*/
-            
-            
-
     //Set current scene
     currentScene = sceneMain;
 
     //Scenes array    
     scenes.push(sceneMain);
     scenes.push(scene1);
-    //scenes.push(scene2);
-    //scenes.push(scene3);
+    scenes.push(scene2);
+    scenes.push(scene3);
 
     //runRenderLoop inside a setTimeout is neccesary in the Playground to stop the PG's runRenderLoop.
     
@@ -249,7 +177,7 @@ var createScene = async function() {
         //piso_madera.jpg
         //41500093.jpg
         //madera-fondo.jpg  *
-        var texture = new BABYLON.Texture("resource/background/41500093.jpg", scene);
+        var texture = new BABYLON.Texture("./resource/background/41500093.jpg", scene);
         groundMaterial.diffuseTexture = texture;          
         
         //groundMaterial.diffuseTexture.uScale = 13.0; // Repeat 5 times on the Vertical Axes
@@ -444,7 +372,7 @@ var createScene = async function() {
             // resource/background/fondo-madera_1189-186.avif
             // resource/background/textura-madera.jpg
             // resource/background/madera-fondo.jpg   <-----
-            const texture2 = new BABYLON.Texture("resource/background/muro_madera.jpg", scene);                  
+            const texture2 = new BABYLON.Texture("./resource/background/muro_madera.jpg", scene);                  
             wall2Material.diffuseTexture = texture2;
 
             wall2.material = wall2Material;

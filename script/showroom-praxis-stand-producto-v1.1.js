@@ -4,6 +4,14 @@ var videoMat = "";
 var videoVidTex = "";
 var createStand = async function(category,scene) {
 
+    var camara = createFreeCamera(scene);
+    camara.setPosition = new BABYLON.Vector3(Math.PI /2, Math.PI /2, 70);
+
+    createLight(scene); 
+            
+    createSuelo(scene);
+
+
     if (category.productos.length>=0){
         productoSelec = category.productos[0];   // por default el primero
     }
@@ -33,14 +41,13 @@ var createStand = async function(category,scene) {
         var buttonH = createBMenu("buttonH","Home",'100px',"white","gray", "20px",null);            
         stackPanel1.addControl(buttonH);
 
-        buttonH.onPointerUpObservable.add(function () {         
+        buttonH.onPointerClickObservable.add(function () {         
             deteleDetalleProd(); 
             advancedTexture1.removeControl(grid);       
             grid.dispose();
             advancedTexture1.dispose();         
-            scene.dispose();
-            currentScene = scenes[0];      
-            
+            scene.dispose();            
+            currentScene = scenes[0]; 
             console.log("IHM - regresar a Home");
         });
 
@@ -56,7 +63,7 @@ var createStand = async function(category,scene) {
         //.onPointerUpObservable.add((evt) => {    
         //.onPointerUpObservable.add(function(value) {    
         //.onPointerClickObservable.add((evt) => {           
-        button1.onPointerUpObservable.add( (evt) => {    
+        button1.onPointerClickObservable.add( (evt) => {    
             console.log("IHM2 utiliza funcion...");
             seleccionProd("button0");
         });
@@ -64,14 +71,14 @@ var createStand = async function(category,scene) {
         var button2 = createBMenu("button1",category.productos[1].title,'220px',"rgb(233,233,233)","rgba(21, 96, 140, 0.90)", "20px",1); 
         stackPanel1.addControl(button2);
 
-        button2.onPointerUpObservable.add(function (evt) {
+        button2.onPointerClickObservable.add(function (evt) {
             seleccionProd("button1");
-        });
+        }); 
         
          var button3 = createBMenu("button2",category.productos[2].title,'220px',"rgb(233,233,233)","rgba(21, 96, 140, 0.90)", "20px",2); 
         stackPanel1.addControl(button3);
 
-        button3.onPointerUpObservable.add(function (evt) {
+        button3.onPointerClickObservable.add(function (evt) {
             seleccionProd("button2");
         });
 
@@ -170,7 +177,8 @@ var createStand = async function(category,scene) {
             deteleDetalleProd();
             createDetalleProd();
             var control;
-            for(i=0;i<category.productos.length;i++){                
+            //for(i=0;i<category.productos.length;i++){                
+            for(i=0;i<3;i++){                
                 control = advancedTexture1.getControlByName("button"+i);
                 if(control.name==nameB){
                     control.background="rgba(11, 161, 248, 0.9)";
@@ -182,7 +190,7 @@ var createStand = async function(category,scene) {
     }
     createDetalleProd();
 
-
+    return scene;
 }
 
 // INI - GUI Babylon JS - controls
@@ -271,8 +279,7 @@ function getRectWhitText(nameR,background,color,width,height,text,fontSize,corne
     return rectangle;
 }
 
-function getImage(name,url,width,height,top,left){
-    //"resource/qr/CMPay-onePage.png"
+function getImage(name,url,width,height,top,left){    
     var image = new BABYLON.GUI.Image(name, url);
     image.width = width;
     image.height = height;
@@ -350,7 +357,7 @@ function createVideo (url,scene) {
             {
                 autoPlay:true,
                 autoUpdateTexture:true,
-                poster:"resource/background/logo_praxis.png"
+                poster:"./resource/background/logo_praxis.png"
             }
         );
         videoVidTex.video.pause();
@@ -385,8 +392,7 @@ function createVideo (url,scene) {
      
 
      
-function createOnePage(name,url,width,height,top,left){
-    //"resource/qr/CMPay-onePage.png"      
+function createOnePage(name,url,width,height,top,left){    
     var imageQR = new BABYLON.GUI.Image(name,url);
     imageQR.width = width;
     imageQR.height = height;
@@ -396,8 +402,7 @@ function createOnePage(name,url,width,height,top,left){
     return imageQR;  
 }
 
-function createForm(name,url,width,height,top,left){
-    // "resource/qr/CMPay-onePage.png"
+function createForm(name,url,width,height,top,left){    
      var imageQR = new BABYLON.GUI.Image(name, url);
     imageQR.width = width;
     imageQR.height = height;
