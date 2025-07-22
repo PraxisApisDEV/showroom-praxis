@@ -39,13 +39,13 @@ var createScene = async function() {
 
                 //console.log("JSON-- stand.titulo:", standProcesoDeNegocio.titulo);
                 //console.log("JSON-- stand.productos.length:", standProcesoDeNegocio.productos.length);             
-                /*muroTexto1.actionManager = new BABYLON.ActionManager(sceneMain);
+                muroTexto1.actionManager = new BABYLON.ActionManager(sceneMain);
                 muroTexto1.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {                                        
                     currentScene = scenes[1];
                     console.log("IHM - Entra a detalle");                    
                     //createSceneD(standOperacionesComerciales.productos);
                     createStand(standProcesoDeNegocio,currentScene);                    
-                }));*/
+                }));
 
                 //var muroTexto2 = createMuroTexto("wall2",standEcomerceSeguridad.titulo,0,5,0,sceneMain);
                 var muroTexto2 = createMuroPrincipal("./resource/background/totem2.png",
@@ -54,13 +54,13 @@ var createScene = async function() {
                 createSombraAObj(muroTexto2,genSombra);
                 //console.log("JSON-- stand.titulo:", standEcomerceSeguridad.titulo);
                 //console.log("JSON-- stand.productos.length:", standEcomerceSeguridad.productos.length);             
-                /*muroTexto2.actionManager = new BABYLON.ActionManager(sceneMain);
+                muroTexto2.actionManager = new BABYLON.ActionManager(sceneMain);
                 muroTexto2.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {                                        
                     currentScene = scenes[2];
                     console.log("IHM - Entra a detalle");                    
                     //createSceneD(standOperacionesComerciales.productos);
                     createStand(standEcomerceSeguridad,currentScene);                    
-                }));*/
+                }));
                 
                 //var muroTexto3 = createMuroTexto("wall3",standOperacionesComerciales.titulo,8,5,0,sceneMain);
                 var muroTexto3 = createMuroPrincipal("./resource/background/totem3.png",

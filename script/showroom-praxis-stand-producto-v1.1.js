@@ -7,9 +7,9 @@ var createStand = async function(category,scene) {
     var camara = createFreeCamera(scene);
     camara.setPosition = new BABYLON.Vector3(Math.PI /2, Math.PI /2, 70);
 
-    createLight(scene); 
+    //createLight(scene); 
             
-    createSuelo(scene);
+    //createSuelo(scene);
 
 
     if (category.productos.length>=0){
@@ -130,13 +130,13 @@ var createStand = async function(category,scene) {
         // Seccion One Page
         var imageQR ="";
         if(productoSelec.onePagePdf!="") {
-            imageQR = createOnePage("qr",productoSelec.onePageQr,"100px","100px","10px","20px");
+            imageQR = createOnePage("qr",productoSelec.onePageQr,"100px","130px","10px","20px");
             stackPanel4.addControl(imageQR);
         }
 
         var formQR ="";
         if(productoSelec.formQr!=""){
-            formQR = createForm("formQr",productoSelec.formQr,"100px","130px","8px","70px");
+            formQR = createForm("formQr",productoSelec.formQr,"100px","130px","10px","110px");
             stackPanel4.addControl(formQR);
         }
     
@@ -215,7 +215,7 @@ function getGrid(){
 
     grid.addColumnDefinition(260, true);
     grid.addColumnDefinition(650, true);
-    grid.addColumnDefinition(350, true);
+    grid.addColumnDefinition(420, true);
     grid.addRowDefinition(650,true);
     //grid.addRowDefinition(400,true);
     //grid.background="gray";
@@ -315,7 +315,7 @@ function createInfoDescription(descrip){
     // 800px 300px
     //"rgb(233,233,233)"    
     //"rgba(34, 71, 172, 0.80)"
-    return getRectWhitText("rect2", "rgba(21, 96, 140, 0.90)", "rgb(233,233,233)",  "350px", "450px",descrip, "16px",10,BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT); 
+    return getRectWhitText("rect2", "rgba(21, 96, 140, 0.90)", "rgb(233,233,233)",  "400px", "330px",descrip, "16px",10,BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT); 
 }
 
  
