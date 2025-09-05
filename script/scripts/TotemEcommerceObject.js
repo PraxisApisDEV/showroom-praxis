@@ -15,8 +15,8 @@ const TotemEcommerceObj = function(scene, textDescription, plane, camera, lamp){
     const tituloEC = SvgObject(scene, new BABYLON.Vector3(88.7,-1,317.2), "images/ECommerce/TEXTO ECOMMERCE Y SEGURIDAD.svg", { width: 10, height: 3.5 }, new BABYLON.Vector3(0, Math.PI/2, -Math.PI/2));
 
     // Opción 1
-    const svgTextoOpt1 = SvgObject(scene, new BABYLON.Vector3(88.7,-9,313.2), "images/ECommerce/VentaDigital/Totem/TEXTO VENTA DIGITAL.svg", { width: 5.5, height: 1.5 }, new BABYLON.Vector3(0, Math.PI/2, 0));
-    const svgIconoOpt1 = SvgObject(scene, new BABYLON.Vector3(88.7,-9,317.2), "images/ECommerce/VentaDigital/Totem/ICONO VENTA DIGITAL.svg", { width: 2, height: 2 }, new BABYLON.Vector3(0, Math.PI/2, 0));
+    const svgTextoOpt1 = SvgObject(scene, new BABYLON.Vector3(88.7,-9,313.2), "images/ECommerce/VentaDigital/totem/TEXTO VENTA DIGITAL.svg", { width: 5.5, height: 1.5 }, new BABYLON.Vector3(0, Math.PI/2, 0));
+    const svgIconoOpt1 = SvgObject(scene, new BABYLON.Vector3(88.7,-9,317.2), "images/ECommerce/VentaDigital/totem/ICONO VENTA DIGITAL.svg", { width: 2, height: 2 }, new BABYLON.Vector3(0, Math.PI/2, 0));
     const plusOpt1     = PlusImageObject(scene, new BABYLON.Vector3(88.7,-9,309.2));
 
     // Opción 2
@@ -117,7 +117,7 @@ const clicOptEC1 = function(plane, scene){
 
                 const icon = SvgObject(scene, new BABYLON.Vector3(88.7,5,302.2), "images/ECommerce/VentaDigital/ICONO VENTA DIGITAL.svg", {width: 5, height: 5}, new BABYLON.Vector3(0, Math.PI/2, 0))
                 const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.7,295.2), "images/ECommerce/VentaDigital/TITULO VENTA DIGITAL.svg", {width: 9, height: 2.5}, new BABYLON.Vector3(0, Math.PI/2, 0));
-                videoActualEC = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 32, height: 17 },new BABYLON.Vector3(88.8,-10,286.2), new BABYLON.Vector3(0, Math.PI/2, 0));
+                videoActualEC = AddVideo(scene, "PTShop.mp4", { width: 32, height: 17 },new BABYLON.Vector3(88.8,-10,286.2), new BABYLON.Vector3(0, Math.PI/2, 0));
 
                 const qr  = ImageObject(scene, "images/ECommerce/VentaDigital/qr.png", new BABYLON.Vector3(88.6,-21,276.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
                 const qrfondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-21,276.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
