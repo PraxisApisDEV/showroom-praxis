@@ -35,6 +35,14 @@
 					"videoUrl": "./resource/video/Funcional-FirmaDigital.mp4",
 					"onePageQr": "./resource/qr/CMPay-onePage.png",
 					"formQr": "./resource/qr/APIPlat-FormContacto.png"
+				},
+				{					
+					"title": "Api Conennect",  
+					"description": "Plataforma centralizada que ofrece un conjunto de APIs especializadas para optimizar procesos críticos de validación, cumplimiento y certificación digital. Diseñado para integrarse fácilmente con tus sistemas y listo para acelerar la transformación digital de tu empresa, asegurando agilidad, seguridad y cumplimiento normativo.",
+					"icono": "",					
+					"videoUrl": "./resource/video/Funcional-FirmaDigital.mp4",
+					"onePageQr": "./resource/qr/CMPay-onePage.png",
+					"formQr": "./resource/qr/APIPlat-FormContacto.png"
 				}				
 			]
 		},
@@ -44,7 +52,7 @@
 			"productos":[
 				{					
 					"title": "Venta Digital",   
-					"description": "Contamos con una plataforma digital denominada Market Place que permite exhibir, vender y gestionar productos o servicios en línea desde un solo lugar. Funciona para modelos de negocio B2C (empresa a consumidor) y B2B (empresa a empresa).\n\nCon Market Place, puedes crear y personalizar tu propio ecosistema de comercio digital en una plataforma 100% trazable y simple. Está diseñada para ofrecer una experiencia fluida y amigable tanto para compradores como para vendedores.",
+					"description": "Contamos con una plataforma digital denominada Market Place que permite exhibir, vender y gestionar productos o servicios en línea desde un solo lugar. Funciona para modelos de negocio B2C (empresa a consumidor) y B2B (empresa a empresa). \nCon Market Place, puedes crear y personalizar tu propio ecosistema de comercio digital en una plataforma 100% trazable y simple. Está diseñada para ofrecer una experiencia fluida y amigable tanto para compradores como para vendedores.",
 					"icono": "",					
 					"videoUrl": "./resource/video/MarketPlace-Funcional-vendedor.mp4",
 					"onePageQr": "./resource/qr/CMPay-onePage.png",

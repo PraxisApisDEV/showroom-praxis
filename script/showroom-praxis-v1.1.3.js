@@ -1,6 +1,9 @@
 const canvas = document.getElementById("renderCanvas");
 const engine = new BABYLON.Engine(canvas, true);
 
+
+
+let allScene1Objects = [];
  //Set current scene
 var currentScene = "";
 
@@ -11,6 +14,7 @@ var createScene = async function() {
 
         // -- Main Scene (Default) --
         var sceneMain = new BABYLON.Scene(engine);
+
             //sceneMain.clearColor = new BABYLON.Color3.Black;
 
         // Escena Detalle de Producto
@@ -18,76 +22,25 @@ var createScene = async function() {
         var scene2 = new BABYLON.Scene(engine);
         var scene3 = new BABYLON.Scene(engine);
 
-            createArcRotateCamera(sceneMain);
+        
+
+            const camera = createArcRotateCamera(sceneMain);
             createLight(sceneMain); 
             var luzD = createLuzDireccional(sceneMain);
             var genSombra = createSombra(luzD);
             
             //new BABYLON.AxesViewer(sceneMain, 5);
 
-             function createSceneM() {                            
+             async function createSceneM() {                            
            
-                createSuelo(sceneMain);  
+               // createSuelo(sceneMain);  
 
-                createMuroPrincipal("./resource/background/home_praxis_mexico.png",70,35,0.4,0,8,25,sceneMain);
+                // Ocultar elementos principales - comentados temporalmente
+                // createMuroPrincipal("./resource/background/home_praxis_mexico.png",70,35,0.4,0,8,25,sceneMain);
 
-                //var muroTexto1 = createMuroTexto("wall1",standProcesoDeNegocio.titulo,-8,5,0,sceneMain);
-                var muroTexto1 = createMuroPrincipal("./resource/background/totem1.png",
-                    5,10,0.4,
-                    -8,5,0,sceneMain);
-                createSombraAObj(muroTexto1,genSombra);
-
-                //console.log("JSON-- stand.titulo:", standProcesoDeNegocio.titulo);
-                //console.log("JSON-- stand.productos.length:", standProcesoDeNegocio.productos.length);             
-                muroTexto1.actionManager = new BABYLON.ActionManager(sceneMain);
-                muroTexto1.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {                                        
-                    currentScene = scenes[1];
-                    console.log("IHM - Entra a detalle");                    
-                    //createSceneD(standOperacionesComerciales.productos);
-                    createStand(standProcesoDeNegocio,currentScene);                    
-                }));
-
-                //var muroTexto2 = createMuroTexto("wall2",standEcomerceSeguridad.titulo,0,5,0,sceneMain);
-                var muroTexto2 = createMuroPrincipal("./resource/background/totem2.png",
-                    5,10,0.4,
-                    0,5,0,sceneMain);
-                createSombraAObj(muroTexto2,genSombra);
-                //console.log("JSON-- stand.titulo:", standEcomerceSeguridad.titulo);
-                //console.log("JSON-- stand.productos.length:", standEcomerceSeguridad.productos.length);             
-                muroTexto2.actionManager = new BABYLON.ActionManager(sceneMain);
-                muroTexto2.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {                                        
-                    currentScene = scenes[2];
-                    console.log("IHM - Entra a detalle");                    
-                    //createSceneD(standOperacionesComerciales.productos);
-                    createStand(standEcomerceSeguridad,currentScene);                    
-                }));
+                // Crear rectángulo giratorio
+                createRectanguloGiratorio(sceneMain, allScene1Objects,camera);
                 
-                //var muroTexto3 = createMuroTexto("wall3",standOperacionesComerciales.titulo,8,5,0,sceneMain);
-                var muroTexto3 = createMuroPrincipal("./resource/background/totem3.png",
-                    5,10,0.4,
-                    8,5,0,sceneMain);
-                createSombraAObj(muroTexto3,genSombra);
-                //console.log("JSON-- stand.titulo:", standOperacionesComerciales.titulo);
-                //console.log("JSON-- stand.productos.length:", standOperacionesComerciales.productos.length);
-                /*for(i=0;i<standOperacionesComerciales.productos.length;i++){
-                    console.log("JSON-- productos.title: ",standOperacionesComerciales.productos[i].title);                    
-                    console.log("JSON-- productos.icono: ",standOperacionesComerciales.productos[i].icono);
-
-                    console.log("JSON-- productos.description: ",standOperacionesComerciales.productos[i].description);                                                            
-                    console.log("JSON-- productos.videoUrl: ",standOperacionesComerciales.productos[i].videoUrl);                    
-                    console.log("JSON-- productos.onePageQr: ",standOperacionesComerciales.productos[i].onePageQr);                    
-                    console.log("JSON-- productos.formQr: ",standOperacionesComerciales.productos[i].formQr);                    
-                }*/
-                       
-                
-                muroTexto3.actionManager = new BABYLON.ActionManager(sceneMain);
-                muroTexto3.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickUpTrigger, function () {                                        
-                    currentScene = scenes[3];
-                    console.log("IHM - Entra a detalle");                    
-                    //createSceneD(standOperacionesComerciales.productos);
-                    createStand(standOperacionesComerciales,currentScene);                    
-                })); 
-
 
                 //-----------------> INI TEXTO 
                 // createTextoFijo("PRODUCTOS DIGITALES - Praxis");
@@ -189,6 +142,7 @@ var createScene = async function() {
         ground.material = groundMaterial;
 
         getAxesViewer(ground,scene);
+        allScene1Objects.push(ground);
         return ground;
     }
 
@@ -466,6 +420,17 @@ var createScene = async function() {
 
         return box;
      } 
+
+
+
+   
+
+
+    
+
+    
+
+
 
     
     createScene().then(sceneToRender => {

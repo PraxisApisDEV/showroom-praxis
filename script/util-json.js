@@ -16,7 +16,7 @@ var productOnboarding = "";
 var productMarketplace = "";
     
     
-    async function loadJSON(url) {
+   const loadJSON = async function(url) {
      try {
        const response = await fetch(url);
        if (!response.ok) {
@@ -30,7 +30,7 @@ var productMarketplace = "";
      }
    }
 
-   async function getStandFromJSON(dataC,numItem) {
+   const getStandFromJSON = async function(dataC,numItem) {
         return dataC.categorias[numItem];
    }
    async function getProductFromJSON(dataP,numItem) {        
