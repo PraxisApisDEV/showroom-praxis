@@ -24,17 +24,34 @@ const TotemPNegociosObj = function(scene, textDescription, plane, camera, lamp){
     const iconoApi = SvgObject(scene, new BABYLON.Vector3(88.7,-21,517.2), "images/ProcesosNegocios/ApiConect/Totem/ICONO API.svg", { width: 2, height: 2 }, new BABYLON.Vector3(0, Math.PI/2, 0));
     const plusApi = PlusImageObject2(scene, new BABYLON.Vector3(88.7,-21,509.2));
     
-    const fondoTexto = SvgObject(scene, new BABYLON.Vector3(88.8,1.5,487.2), "images/ProcesosNegocios/Cuadro por texto.svg", { width: 30, height: 6 }, new BABYLON.Vector3(0, Math.PI/2, 0));
+    const fondoTexto = SvgObject(scene, new BABYLON.Vector3(88.8,1.5,486.2), "images/ProcesosNegocios/Cuadro por texto.svg", { width: 32, height: 6 }, new BABYLON.Vector3(0, Math.PI/2, 0));
     
-    const icon = SvgObject(scene, new BABYLON.Vector3(88.7,5,502.2), "images/ProcesosNegocios/Onboarding/Icono onboarding.svg", {width: 5, height: 5}, new BABYLON.Vector3(0, Math.PI/2, 0))
-    const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.7,495.2), "images/ProcesosNegocios/Onboarding/Titulo Onboarding.svg", {width: 9, height: 2.3}, new BABYLON.Vector3(0, Math.PI/2, 0));
+    const icon = SvgObject(scene, new BABYLON.Vector3(88.7,4.5,502.2), "images/ProcesosNegocios/Onboarding/Icono onboarding.svg", {width: 4, height: 4}, new BABYLON.Vector3(0, Math.PI/2, 0))
+    const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.4,495.2), "images/ProcesosNegocios/Onboarding/Titulo Onboarding.svg", {width: 9, height: 1.5}, new BABYLON.Vector3(0, Math.PI/2, 0));
 
-    const logo  = ImageObject(scene, "logos/LOGO PTS.png", new BABYLON.Vector3(88.8,-21.5,487.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6, height: 3});
-    const silla = ImageObject(scene, "images/ProcesosNegocios/Silla.png", new BABYLON.Vector3(88.7,-19.5,469.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6, height: 9});
+    const logo  = ImageObject(scene, "logos/LOGO PTS.png", new BABYLON.Vector3(88.8,-23.5,484.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 3});
+    const silla = ImageObject(scene, "images/ProcesosNegocios/Silla.png", new BABYLON.Vector3(88.7,-19.5,464.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6, height: 9});
 
-    const text = TextObject(scene,textDescription, 21, "white", new BABYLON.Vector3(88.7,-12.2,487.2), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 28, height: 30}, {width:500, height:250});
+    const text = TextObject(scene,textDescription, 23, "white", new BABYLON.Vector3(88.7,-12.5,486.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
 
-    videoActualP = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 32, height: 17 },new BABYLON.Vector3(88.8,-10,486.2), new BABYLON.Vector3(0, Math.PI/2, 0));
+    videoActualP = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 38, height: 17 },new BABYLON.Vector3(88.8,-10,483.2), new BABYLON.Vector3(0, Math.PI/2, 0));
+
+    const qr2  = ImageObject(scene, "images/ProcesosNegocios/Onboarding/qr2.png", new BABYLON.Vector3(88.6,-12,462.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
+    const qr2fondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-12,462.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
+    const contacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,462), "images/ProcesosNegocios/Texto contactanos.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
+    const iconContacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,463.9), "images/ProcesosNegocios/Icono contactanos.svg", {width: 0.6, height: 0.6}, new BABYLON.Vector3(0, Math.PI/2, 0));
+
+    objectActualPN.push(qr2,
+        qr2fondo,
+        contacto,
+        iconContacto
+    );
+
+    allObjectPN.push( qr2,
+        qr2fondo,
+        contacto,
+        iconContacto
+    );
 
     objectActualPN.push(icon);
     objectActualPN.push(titulo);
@@ -51,7 +68,7 @@ const TotemPNegociosObj = function(scene, textDescription, plane, camera, lamp){
     )
     allvideosPN.push(videoActualP.video);
 
-    BotonOcultar(scene,allObjectPN, new BABYLON.Vector3(88.8,-21.5,500.2), {width: 6, height: 3, depth: 1}, "Regresar", new BABYLON.Vector3(0, Math.PI/2, 0), videoActualP.video, camera, lamp, allvideosPN, 2)
+    BotonOcultar(scene,allObjectPN, new BABYLON.Vector3(86.8,-21.5,500.2), {width: 7, height: 2}, "images/ProcesosNegocios/BOTON ROSA.svg", new BABYLON.Vector3(0, Math.PI/2, 0), videoActualP.video, camera, lamp, allvideosPN, 2)
 
 
     clicOptPN1(opt1, scene);
@@ -76,14 +93,31 @@ const clicOptPN1 = function(plane, scene){
                 objectActualPN = [];
                 getTextPN(0).then((text) =>{
                     console.log(text)
-                    const texts = TextObject(scene, text, 21, "white", new BABYLON.Vector3(88.7,-12.2,487.2), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 28, height: 30}, {width:500, height:250});
+                    const texts = TextObject(scene, text, 23, "white", new BABYLON.Vector3(88.7,-12.5,486.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
                     objectActualPN.push(texts);
                     allObjectPN.push(texts);
                 })
 
-                const icon = SvgObject(scene, new BABYLON.Vector3(88.7,5,502.2), "images/ProcesosNegocios/Onboarding/Icono onboarding.svg", {width: 5, height: 5}, new BABYLON.Vector3(0, Math.PI/2, 0))
-                const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.7,495.2), "images/ProcesosNegocios/Onboarding/Titulo Onboarding.svg", {width: 9, height: 2.3}, new BABYLON.Vector3(0, Math.PI/2, 0));
-                videoActualP = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 32, height: 17 },new BABYLON.Vector3(88.8,-10,486.2), new BABYLON.Vector3(0, Math.PI/2, 0));
+                const icon = SvgObject(scene, new BABYLON.Vector3(88.7,4.5,502.2), "images/ProcesosNegocios/Onboarding/Icono onboarding.svg", {width: 4, height: 4}, new BABYLON.Vector3(0, Math.PI/2, 0))
+                const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.4,495.2), "images/ProcesosNegocios/Onboarding/Titulo Onboarding.svg", {width: 9, height: 1.5}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                videoActualP = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 38, height: 17 },new BABYLON.Vector3(88.8,-10,483.2), new BABYLON.Vector3(0, Math.PI/2, 0));
+
+                const qr2  = ImageObject(scene, "images/ProcesosNegocios/Onboarding/qr2.png", new BABYLON.Vector3(88.6,-12,462.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
+                const qr2fondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-12,462.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
+                const contacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,462), "images/ProcesosNegocios/Texto contactanos.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const iconContacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,463.9), "images/ProcesosNegocios/Icono contactanos.svg", {width: 0.6, height: 0.6}, new BABYLON.Vector3(0, Math.PI/2, 0));
+            
+                objectActualPN.push(qr2,
+                    qr2fondo,
+                    contacto,
+                    iconContacto
+                );
+            
+                allObjectPN.push( qr2,
+                    qr2fondo,
+                    contacto,
+                    iconContacto
+                );
 
                 allObjectPN.push(titulo, icon, videoActualP.plane);
 
@@ -111,27 +145,38 @@ const clicOptPN2 = function(plane, scene){
                 objectActualPN = [];
                 getTextPN(3).then((text) =>{
                     console.log(text)
-                    const texts = TextObject(scene, text, 21, "white", new BABYLON.Vector3(88.7,-12.2,487.2), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 28, height: 30}, {width:500, height:250});
+                    const texts = TextObject(scene, text, 23, "white", new BABYLON.Vector3(88.7,-12.5,486.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
                     objectActualPN.push(texts);
                     allObjectPN.push(texts);
                 })
 
-                const icon = SvgObject(scene, new BABYLON.Vector3(88.7,5,502.2), "images/ProcesosNegocios/FirmaDigital/Icono Firma digital.svg", {width: 5, height: 5}, new BABYLON.Vector3(0, Math.PI/2, 0))
-                const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.6,494.2), "images/ProcesosNegocios/FirmaDigital/Titulo Firma digital.svg", {width: 10, height: 1.9}, new BABYLON.Vector3(0, Math.PI/2, 0));
-                videoActualP = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 32, height: 17 },new BABYLON.Vector3(88.8,-10,486.2), new BABYLON.Vector3(0, Math.PI/2, 0));
+                const icon = SvgObject(scene, new BABYLON.Vector3(88.7,4.5,502.2), "images/ProcesosNegocios/FirmaDigital/Icono Firma digital.svg", {width: 4, height: 4}, new BABYLON.Vector3(0, Math.PI/2, 0))
+                const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.4,495.2), "images/ProcesosNegocios/FirmaDigital/Titulo Firma digital.svg", {width: 9, height: 1.2}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                //videoActualP = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 38, height: 17 },new BABYLON.Vector3(88.8,-10,483.2), new BABYLON.Vector3(0, Math.PI/2, 0));
 
-                const qr2  = ImageObject(scene, "images/ProcesosNegocios/FirmaDigital/qr2.png", new BABYLON.Vector3(88.6,-12,468.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
-                const qr2fondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-12,468.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
-                const contacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,468), "images/ProcesosNegocios/Texto contactanos.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
-                const iconContacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,470), "images/ProcesosNegocios/Icono contactanos.svg", {width: 0.6, height: 0.6}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const imgV = ImageObject(scene, "images/ProcesosNegocios/FirmaDigital/imagenP.jpg",new BABYLON.Vector3(88.8,-10,483.2),1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 38, height: 17 });
+
+                const qr  = ImageObject(scene, "images/ProcesosNegocios/FirmaDigital/qr.png", new BABYLON.Vector3(88.6,-21,470.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
+                const qrfondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-21,470.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
+                const masInfo = SvgObject(scene, new BABYLON.Vector3(88.6,-18.5,470), "images/ProcesosNegocios/Texto mas informacion.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const iconMasInfo = SvgObject(scene, new BABYLON.Vector3(88.6,-18.5,471.9), "images/ProcesosNegocios/Icono mas informacion.svg", {width: 1, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
                 
-                objectActualPN.push(qr2,
-                    qr2fondo, contacto, iconContacto
+                const qr2  = ImageObject(scene, "images/ProcesosNegocios/FirmaDigital/qr2.png", new BABYLON.Vector3(88.6,-12,462.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
+                const qr2fondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-12,462.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
+                const contacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,462), "images/ProcesosNegocios/Texto contactanos.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const iconContacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,463.9), "images/ProcesosNegocios/Icono contactanos.svg", {width: 0.6, height: 0.6}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                
+                objectActualPN.push(qr, qr2,
+                    qr2fondo, qrfondo,
+                    masInfo, contacto,
+                    iconMasInfo, iconContacto, imgV
                 );
-                        
-                 allObjectPN.push( qr2,
-                     qr2fondo, contacto, iconContacto
-                 );
+
+                allObjectPN.push(qr, qr2,
+                    qr2fondo, qrfondo,
+                    masInfo, contacto,
+                    iconMasInfo, iconContacto, imgV
+                );
 
                 allObjectPN.push(titulo, icon, videoActualP.plane);
 
@@ -161,24 +206,24 @@ const clicOptPN3 = function(plane, scene){
                 objectActualPN = [];
                 getTextPN(4).then((text) =>{
                     console.log(text)
-                    const texts = TextObject(scene, text, 21, "white", new BABYLON.Vector3(88.7,-12.2,487.2), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 28, height: 30}, {width:500, height:250});
+                    const texts = TextObject(scene, text, 23, "white", new BABYLON.Vector3(88.7,-12.5,486.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
                     objectActualPN.push(texts);
                     allObjectPN.push(texts);
                 })
 
-                const icon = SvgObject(scene, new BABYLON.Vector3(88.7,5,502.2), "images/ProcesosNegocios/ApiConect/ICONO API.svg", {width: 5, height: 5}, new BABYLON.Vector3(0, Math.PI/2, 0))
-                const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.6,494.2), "images/ProcesosNegocios/ApiConect/TITULO API.svg", {width: 10, height: 1.9}, new BABYLON.Vector3(0, Math.PI/2, 0));
-                videoActualP = AddVideo(scene, "API Connect.mp4", { width: 32, height: 17 },new BABYLON.Vector3(88.8,-10,486.2), new BABYLON.Vector3(0, Math.PI/2, 0));
+                const icon = SvgObject(scene, new BABYLON.Vector3(88.7,4.5,502.2), "images/ProcesosNegocios/ApiConect/ICONO API.svg", {width: 4, height: 4}, new BABYLON.Vector3(0, Math.PI/2, 0))
+                const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.4,495.2), "images/ProcesosNegocios/ApiConect/TITULO API.svg", {width: 9, height: 1.2}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                videoActualP = AddVideo(scene, "API Connect.mp4", { width: 38, height: 17 },new BABYLON.Vector3(88.8,-10,483.2), new BABYLON.Vector3(0, Math.PI/2, 0));
 
-                const qr  = ImageObject(scene, "images/ProcesosNegocios/ApiConect/qr Api Conect.png", new BABYLON.Vector3(88.6,-21,476.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
-                const qrfondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-21,476.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
-                const masInfo = SvgObject(scene, new BABYLON.Vector3(88.6,-18.5,476), "images/ProcesosNegocios/Texto mas informacion.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
-                const iconMasInfo = SvgObject(scene, new BABYLON.Vector3(88.6,-18.5,477.9), "images/ProcesosNegocios/Icono mas informacion.svg", {width: 1, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const qr  = ImageObject(scene, "images/ProcesosNegocios/ApiConect/qr Api Conect.png", new BABYLON.Vector3(88.6,-21,470.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
+                const qrfondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-21,470.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
+                const masInfo = SvgObject(scene, new BABYLON.Vector3(88.6,-18.5,470), "images/ProcesosNegocios/Texto mas informacion.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const iconMasInfo = SvgObject(scene, new BABYLON.Vector3(88.6,-18.5,471.9), "images/ProcesosNegocios/Icono mas informacion.svg", {width: 1, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
                 
-                const qr2  = ImageObject(scene, "images/ProcesosNegocios/ApiConect/qr2.png", new BABYLON.Vector3(88.6,-12,468.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
-                const qr2fondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-12,468.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
-                const contacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,468), "images/ProcesosNegocios/Texto contactanos.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
-                const iconContacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,470), "images/ProcesosNegocios/Icono contactanos.svg", {width: 0.6, height: 0.6}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const qr2  = ImageObject(scene, "images/ProcesosNegocios/ApiConect/qr2.png", new BABYLON.Vector3(88.6,-12,462.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
+                const qr2fondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(88.6,-12,462.2), 0.2, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6.3, height: 6.3});
+                const contacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,462), "images/ProcesosNegocios/Texto contactanos.svg", {width: 2.8, height: 1}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const iconContacto = SvgObject(scene, new BABYLON.Vector3(88.6,-9.5,463.9), "images/ProcesosNegocios/Icono contactanos.svg", {width: 0.6, height: 0.6}, new BABYLON.Vector3(0, Math.PI/2, 0));
                 
                 allObjectPN.push(titulo, icon, videoActualP.plane);
 

@@ -1,0 +1,11 @@
+{
+    "country": "MX",
+    "domain": "enrollment",
+    "apiName": "enrolled",
+    "service": "userenrolled",
+    "product": "1021",
+    "request": {
+        "idTemplateContract": "5",
+        "Nombre": "Salvador Romero Prueba"
+            }
+}

@@ -35,10 +35,10 @@ const PauseVideos = function(allvideos){
 const ActionMover1 = function(scene, camera){
     camera.alpha = -2.245537269018449;
     camera.beta = 1.3654983619940768; 
-    girarCamaraA(camera, 35, 1500).then((camara) => {
-        girarCamaraBetaA(camera, 5, 1500).then((camara) => {
+    girarCamaraA(camera, 35, 1).then((camara) => {
+        girarCamaraBetaA(camera, 0, 1).then((camara) => {
             console.log(camera);
-            moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 130), 10, 1500).then(() => {
+            moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 130), 10, 1).then(() => {                
                 const totem1 = ImageObject(scene, "images/ProcesosNegocios/TOTEM NARANJA.png", new BABYLON.Vector3(-28.8,-1.5,170), 1, new BABYLON.Vector3(0, 0, 0), { width: 15, height: 30});
                 const titulo1 = SvgObject(scene, new BABYLON.Vector3(-33.8,5,169), "images/ProcesosNegocios/TEXTO PROCESOS DE NEGOCIO.svg", { width: 10, height: 3.5 }, new BABYLON.Vector3(0, 0, -Math.PI/2));
                 const totem2 = ImageObject(scene, "images/ECommerce/TOMEM MORADO.png", new BABYLON.Vector3(-8.8,-1.5,170), 1, new BABYLON.Vector3(0, 0, 0), { width: 15, height: 30});
@@ -91,13 +91,13 @@ const ClicTotem1 = function(plane, scene, allTotemOptions, camera){
                 camera.alpha = -1.6251072771252533;
                 camera.beta = 1.461711260451552;
                 OcultarPrimerosObjetos(allTotemOptions);
-                moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 270), 10, 1500).then(() => {
-                    girarCamaraA(camera, -89, 1500).then(() => {
+                moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 270), 10, 1).then(() => {
+                    girarCamaraA(camera, -89, 1).then(() => {
                         const lamp = LampObj(scene, new BABYLON.Vector3(80, 27, 277));//17
                         TotemECommerce(scene, new BABYLON.Vector3(89, -8.5, 312), camera, lamp);
-                        moverCamaraAZoom(camera, new BABYLON.Vector3(58, -7.8, 288), 10, 1500).then(() => {
-                            girarCamaraA(camera, -1, 1500).then(() => {
-                                girarCamaraBetaA(camera, 4, 1500).then(() => {
+                        moverCamaraAZoom(camera, new BABYLON.Vector3(58, -8.7, 288), 10, 1).then(() => {
+                            girarCamaraA(camera, -14, 1).then(() => {
+                                girarCamaraBetaA(camera, 9, 1).then(() => {
                                     console.log(camera);
                                 });
                             });
@@ -127,13 +127,13 @@ const ClicTotem2 = function(plane, scene, allTotemOptions, camera){
                 camera.alpha = -1.6251072771252533;
                 camera.beta = 1.461711260451552;
                 OcultarPrimerosObjetos(allTotemOptions);
-                moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 470), 10, 1500).then(() => {
-                    girarCamaraA(camera, -89, 1500).then(() => {
+                moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 470), 10, 1).then(() => {
+                    girarCamaraA(camera, -89, 1).then(() => {
                         const lamp = LampObj(scene, new BABYLON.Vector3(80, 27, 477));
                         TotemProcesosNeg(scene, new BABYLON.Vector3(89, -8.5, 512), camera, lamp);
-                        moverCamaraAZoom(camera, new BABYLON.Vector3(58, -8, 488), 10, 1500).then(() => {
-                            girarCamaraA(camera, -3, 1500).then(() => {
-                                girarCamaraBetaA(camera, 2, 1500).then(() => {
+                        moverCamaraAZoom(camera, new BABYLON.Vector3(58, -8.7, 488), 10, 1).then(() => {
+                            girarCamaraA(camera, -14, 1).then(() => {
+                                girarCamaraBetaA(camera, 9, 1).then(() => {
                                     console.log(camera);
                                 });
                             });
@@ -163,10 +163,10 @@ const ClicTotem3= function(plane, scene, allTotemOptions, camera){
                 camera.alpha = -1.6251072771252533;
                 camera.beta = 1.461711260451552;
                 OcultarPrimerosObjetos(allTotemOptions);
-                moverCamaraAZoom(camera, new BABYLON.Vector3(-16, -10, 560), 10, 1500).then(() => {
+                moverCamaraAZoom(camera, new BABYLON.Vector3(-16, -8, 560), 10, 1).then(() => {
                     TotemOperacionesCom(scene, new BABYLON.Vector3(-41, -8.5, 590.6), camera)
-                    girarCamaraBetaA(camera, 6, 1500).then(() => {
-                        girarCamaraA(camera, 2, 1500).then(() => {
+                    girarCamaraBetaA(camera, 0, 1).then(() => {
+                        girarCamaraA(camera, -1, 1).then(() => {
                             console.log(camera);
                         })
                     });
@@ -313,11 +313,11 @@ const girarCamaraBetaA = function girarCamaraHacia(camera, grados, duracion = 10
 const ActionButton1 = function(camera, scene){
     camera.alpha = -3.1397002203320157;
     camera.beta = 1.530596413098753;
-    girarCamaraA(camera, 180, 1500).then(() => {
-        moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 270), 10, 1500).then(() =>{
-            girarCamaraA(camera, 90, 1500).then(() => {
-                moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 130), 10, 1500).then(() => {
-                    girarCamaraA(camera, 180, 1500).then(() => {
+    girarCamaraA(camera, 180, 1).then(() => {
+        moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 270), 10, 1).then(() =>{
+            girarCamaraA(camera, 90, 1).then(() => {
+                moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 130), 10, 1).then(() => {
+                    girarCamaraA(camera, 180, 1).then(() => {
                         const totem1 = ImageObject(scene, "images/ProcesosNegocios/TOTEM NARANJA.png", new BABYLON.Vector3(-28.8,-1.5,170), 1, new BABYLON.Vector3(0, 0, 0), { width: 15, height: 30});
                         const titulo1 = SvgObject(scene, new BABYLON.Vector3(-33.8,5,169), "images/ProcesosNegocios/TEXTO PROCESOS DE NEGOCIO.svg", { width: 10, height: 3.5 }, new BABYLON.Vector3(0, 0, -Math.PI/2));
                         const totem2 = ImageObject(scene, "images/ECommerce/TOMEM MORADO.png", new BABYLON.Vector3(-8.8,-1.5,170), 1, new BABYLON.Vector3(0, 0, 0), { width: 15, height: 30});
@@ -347,11 +347,11 @@ const ActionButton1 = function(camera, scene){
 const ActionButton2 = function(camera, scene){
     camera.alpha = -3.164127859714081;
     camera.beta = 1.5021467633298364;
-    girarCamaraA(camera, 180, 1500).then(() => {
-        moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 470), 10, 1500).then(() =>{
-            girarCamaraA(camera, 90, 1500).then(() => {
-                moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 130), 10, 1500).then(() => {
-                    girarCamaraA(camera, 180, 1500).then(() => {
+    girarCamaraA(camera, 180, 1).then(() => {
+        moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 470), 10, 1).then(() =>{
+            girarCamaraA(camera, 90, 1).then(() => {
+                moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 130), 10, 1).then(() => {
+                    girarCamaraA(camera, 180, 1).then(() => {
                         const totem1 = ImageObject(scene, "images/ProcesosNegocios/TOTEM NARANJA.png", new BABYLON.Vector3(-28.8,-1.5,170), 1, new BABYLON.Vector3(0, 0, 0), { width: 15, height: 30});
                         const titulo1 = SvgObject(scene, new BABYLON.Vector3(-33.8,5,169), "images/ProcesosNegocios/TEXTO PROCESOS DE NEGOCIO.svg", { width: 10, height: 3.5 }, new BABYLON.Vector3(0, 0, -Math.PI/2));
                         const totem2 = ImageObject(scene, "images/ECommerce/TOMEM MORADO.png", new BABYLON.Vector3(-8.8,-1.5,170), 1, new BABYLON.Vector3(0, 0, 0), { width: 15, height: 30});
@@ -381,9 +381,9 @@ const ActionButton2 = function(camera, scene){
 const ActionButton3 = function(camera, scene){
     camera.alpha = -1.5681009893065228;
     camera.beta = 1.5903277102595965;
-    girarCamaraA(camera, 180, 1500).then(() => {
-        moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 130), 10, 1500).then(() => {
-            girarCamaraA(camera, 180, 1500).then(() => {
+    girarCamaraA(camera, 180, 1).then(() => {
+        moverCamaraAZoom(camera, new BABYLON.Vector3(-10, 5, 130), 10, 1).then(() => {
+            girarCamaraA(camera, 180, 1).then(() => {
                 const totem1 = ImageObject(scene, "images/ProcesosNegocios/TOTEM NARANJA.png", new BABYLON.Vector3(-28.8,-1.5,170), 1, new BABYLON.Vector3(0, 0, 0), { width: 15, height: 30});
                 const titulo1 = SvgObject(scene, new BABYLON.Vector3(-33.8,5,169), "images/ProcesosNegocios/TEXTO PROCESOS DE NEGOCIO.svg", { width: 10, height: 3.5 }, new BABYLON.Vector3(0, 0, -Math.PI/2));
                 const totem2 = ImageObject(scene, "images/ECommerce/TOMEM MORADO.png", new BABYLON.Vector3(-8.8,-1.5,170), 1, new BABYLON.Vector3(0, 0, 0), { width: 15, height: 30});

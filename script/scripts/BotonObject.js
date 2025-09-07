@@ -1,6 +1,6 @@
-const BotonOcultar = function (scene, allObject, position = new BABYLON.Vector3(85, 1, 287), dimension = { width: 3, height: 1, depth: 0.3}, nombre, rotation  = new BABYLON.Vector3(0, 0, 0), video, camera, lampara, allvideos, num) {
+const BotonOcultar = function (scene, allObject, position = new BABYLON.Vector3(85, 1, 287), dimension = { width: 3, height: 1}, nombre, rotation  = new BABYLON.Vector3(0, 0, 0), video, camera, lampara, allvideos, num) {
     // Crear la base del botón
-    const boton = BABYLON.MeshBuilder.CreateBox("boton3D", dimension, scene);
+   /* const boton = BABYLON.MeshBuilder.CreateBox("boton3D", dimension, scene);
     boton.position =  position;
 
     // Material del botón
@@ -25,8 +25,9 @@ const BotonOcultar = function (scene, allObject, position = new BABYLON.Vector3(
     textMaterial.useAlphaFromDiffuseTexture = true;
     //textMaterial.emissiveColor = BABYLON.Color3.White();
     textPlane.material = textMaterial;
-
-    boton.rotation = rotation;
+ */
+    const boton = SvgObject(scene, position, nombre, dimension,rotation);
+    //boton.rotation = rotation;
 
     // Acción al hacer clic
     boton.actionManager = new BABYLON.ActionManager(scene);
@@ -65,7 +66,7 @@ const BotonOcultar = function (scene, allObject, position = new BABYLON.Vector3(
         })
     );
 
-    textPlane.actionManager = new BABYLON.ActionManager(scene);
+   /* textPlane.actionManager = new BABYLON.ActionManager(scene);
 textPlane.actionManager.registerAction(
     new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, () => {
             boton.setEnabled(false);
@@ -99,7 +100,7 @@ textPlane.actionManager.registerAction(
             }
            
     })
-);
+);*/
 
     return boton;
 }

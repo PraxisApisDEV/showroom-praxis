@@ -92,7 +92,7 @@ const TotemOperacionesCom = async function(scene, position = new BABYLON.Vector3
 }
 
 const FondoObj = function(scene, position =  new BABYLON.Vector3(0, 6, 0)){
-    const plane = BABYLON.MeshBuilder.CreatePlane("plane", { width: 50, height: 31 }, scene);
+    const plane = BABYLON.MeshBuilder.CreatePlane("plane", { width: 70, height: 40 }, scene);
     const texture = new BABYLON.Texture("./resource/images/ECommerce/Fondo.png", scene);
 
     const material = new BABYLON.StandardMaterial("material", scene);
@@ -110,7 +110,7 @@ const FondoObj = function(scene, position =  new BABYLON.Vector3(0, 6, 0)){
 }
 
 const FondoObj2 = function(scene, position =  new BABYLON.Vector3(0, 6, 0)){
-    const plane = BABYLON.MeshBuilder.CreatePlane("plane", { width: 50, height: 31 }, scene);
+    const plane = BABYLON.MeshBuilder.CreatePlane("plane", { width: 70, height: 40 }, scene);
     const texture = new BABYLON.Texture("./resource/images/ECommerce/Fondo.png", scene);
 
     const material = new BABYLON.StandardMaterial("material", scene);

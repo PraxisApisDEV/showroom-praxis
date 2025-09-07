@@ -41,7 +41,7 @@ const loadBuildingComerce = async (scene) => {
 };
 
 const loadBuildingBussines = async (scene) => {
-    const result = await BABYLON.SceneLoader.ImportMeshAsync(
+    /*const result = await BABYLON.SceneLoader.ImportMeshAsync(
         "",
         "./resource/models/",
         "art_gallery.glb",
@@ -54,7 +54,8 @@ const loadBuildingBussines = async (scene) => {
     building.scaling = new BABYLON.Vector3(28, 28, 28);    // escala normal
     building.rotation = new BABYLON.Vector3(0, Math.PI/2, 0); // rotado 180°
      
-    return building;
+    return building;*/
+    return false;
 };
 
 const loadTableBussines = async (scene) => {
@@ -108,7 +109,7 @@ const loadLight = async (scene) => {
     return building;
 };
 const loadPaint = async (scene, position = new BABYLON.Vector3(0, 6, 0), scaling = new BABYLON.Vector3(0, 0, 0), rotation = new BABYLON.Vector3(0, 0, 0)) => {
-    const result = await BABYLON.SceneLoader.ImportMeshAsync(
+    /*const result = await BABYLON.SceneLoader.ImportMeshAsync(
         "",
         "./resource/models/",
         "painting_shades_of_blue.glb",
@@ -120,7 +121,7 @@ const loadPaint = async (scene, position = new BABYLON.Vector3(0, 6, 0), scaling
     building.position = position; // posición en el mundo
     building.scaling = scaling;    // escala normal
     building.rotation = rotation; // rotado 180°
-
-    return building;
+*/
+    return false;//building;
 };
 
