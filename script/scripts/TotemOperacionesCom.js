@@ -27,7 +27,7 @@ const TotemOperacionesComObj = function(scene, textDescription, plane, camera, l
     const logo = ImageObject(scene, "logos/LOGO PTS.png", new BABYLON.Vector3(-15.6,-23.5,590.1), 1, new BABYLON.Vector3(0, 0, 0), { width: 5, height: 3});
     const silla = ImageObject(scene, "images/OperacionesComerciales/SILLON.png", new BABYLON.Vector3(6.4,-19.5,590.09), 1, new BABYLON.Vector3(0, 0, 0), { width: 9, height: 9});
 
-    const text = TextObject(scene,textDescription, 21, "white", new BABYLON.Vector3(-14.6,-12.2,590.1), new BABYLON.Vector3(0, 0, 0), {width: 31, height: 30}, {width:500, height:250});
+    const text = TextObject(scene,textDescription, 23, "white", new BABYLON.Vector3(-15.6,-12.5,590.1), new BABYLON.Vector3(0, 0, 0), {width: 31, height: 30}, {width:500, height:250});
 
     videoActualOC = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 38, height: 17 },new BABYLON.Vector3(-12.6,-10,590.1), new BABYLON.Vector3(0, 0, 0));
 

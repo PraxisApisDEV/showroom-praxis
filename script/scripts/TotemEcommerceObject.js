@@ -42,7 +42,7 @@ const TotemEcommerceObj = function(scene, textDescription, plane, camera, lamp){
     const logo = ImageObject(scene, "logos/LOGO PTS.png", new BABYLON.Vector3(88.8,-23.5,284.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 3});
     const silla = ImageObject(scene, "images/ECommerce/SILLA.png", new BABYLON.Vector3(88.7,-19.5,264.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6, height: 9});
 
-    const text = TextObject(scene,textDescription, 20.7, "white", new BABYLON.Vector3(88.7,-12,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
+    const text = TextObject(scene,textDescription, 23, "white", new BABYLON.Vector3(88.7,-12.5,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
 
     videoActualEC = AddVideo(scene, "PTShop.mp4", { width: 38, height: 17 },new BABYLON.Vector3(88.8,-10,283.2), new BABYLON.Vector3(0, Math.PI/2, 0));
 
@@ -110,7 +110,7 @@ const clicOptEC1 = function(plane, scene){
                 objectActualEC = [];
                 getTextEC(0).then((text) =>{
                     console.log(text)
-                    const texts = TextObject(scene, text, 20.7, "white", new BABYLON.Vector3(88.7,-12,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
+                    const texts = TextObject(scene, text, 23, "white", new BABYLON.Vector3(88.7,-12.5,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
                     objectActualEC.push(texts);
                     allObjectEC.push(texts);
                 })
@@ -168,13 +168,13 @@ const clicOptEC2 = function(plane, scene){
                 objectActualEC = [];
                 getTextEC(1).then((text) =>{
                     console.log(text)
-                    const texts = TextObject(scene, text, 21, "white", new BABYLON.Vector3(88.7,-12.2,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
+                    const texts = TextObject(scene, text, 23, "white", new BABYLON.Vector3(88.7,-12.5,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
                     objectActualEC.push(texts);
                     allObjectEC.push(texts);
                 })
 
                 const icon = SvgObject(scene, new BABYLON.Vector3(88.7,4.5,302.2), "images/ECommerce/MensajeriaAlerta/ICONO MENSAJERIA.svg", {width: 4, height: 4}, new BABYLON.Vector3(0, Math.PI/2, 0))
-                const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.4,296.2), "images/ECommerce/MensajeriaAlerta/TITULO MENSAJERIA.svg", {width: 7, height: 1.4}, new BABYLON.Vector3(0, Math.PI/2, 0));
+                const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.4,296.2), "images/ECommerce/MensajeriaAlerta/TITULO MENSAJERIA.svg", {width: 7, height: 1.6}, new BABYLON.Vector3(0, Math.PI/2, 0));
                 videoActualEC = AddVideo(scene, "Chaski.mp4", { width: 38, height: 17 },new BABYLON.Vector3(88.8,-10,283.2), new BABYLON.Vector3(0, Math.PI/2, 0));
 
                 const qr  = ImageObject(scene, "images/ECommerce/MensajeriaAlerta/qr.png", new BABYLON.Vector3(88.6,-21,270.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 5});
@@ -278,7 +278,7 @@ const clicOptEC4 = function(plane, scene){
                 objectActualEC = [];
                 getTextEC(3).then((text) =>{
                     console.log(text)
-                    const texts = TextObject(scene, text, 20, "white", new BABYLON.Vector3(88.7,-12.6,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
+                    const texts = TextObject(scene, text, 23, "white", new BABYLON.Vector3(88.7,-12.5,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});
                     objectActualEC.push(texts);
                     allObjectEC.push(texts);
                 })
