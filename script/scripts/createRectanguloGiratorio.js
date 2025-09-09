@@ -3,8 +3,8 @@
 
     //const fondo = FondoMainObj(scene, new BABYLON.Vector3(500,-200,600))
     var faceUV = [];
-    faceUV[0] = new BABYLON.Vector4(-0.5, -0.5, 1.6, 1.6); // Frente (+z)
-    faceUV[1] = new BABYLON.Vector4(-0.5, -0.5, 1.6, 1.6); // Atrás (-z)
+    faceUV[0] = new BABYLON.Vector4(-1.5, -1.5, 2.6, 2.6); // Frente (+z)
+    faceUV[1] = new BABYLON.Vector4(-1.5, -1.5, 2.6, 2.6); // Atrás (-z)
     
     for (let i = 2; i < 6; i++) {
         faceUV[i] = new BABYLON.Vector4(0, 0, 0, 0); // invisibles 
@@ -29,10 +29,10 @@
 
     var texturaMitad1 = new BABYLON.StandardMaterial("texturaMitad1", scene);
     var tex1 = new BABYLON.Texture("./resource/images/LOGO PTS.png", scene);
-    tex1.uScale = 1;           // Reduce al 50% del ancho
-    tex1.vScale = 1;           // Reduce al 50% del alto
-    tex1.uOffset = -0.26;         // Centrar en el eje U (horizontal)
-    tex1.vOffset = 0;         // Centrar en el eje V (vertical)
+    tex1.uScale = 2.6;           // Reduce al 50% del ancho
+    tex1.vScale = 2.6;           // Reduce al 50% del alto
+    tex1.uOffset = -1.9;         // Centrar en el eje U (horizontal)
+    tex1.vOffset = -0.7;         // Centrar en el eje V (vertical)
     tex1.wrapU = BABYLON.Texture.CLAMP_ADDRESSMODE;
     tex1.wrapV = BABYLON.Texture.CLAMP_ADDRESSMODE;
     texturaMitad1.diffuseTexture = tex1;
@@ -43,10 +43,10 @@
     // Material para mitad2 (igual que el anterior)
     var texturaMitad2 = new BABYLON.StandardMaterial("texturaMitad2", scene);
     var tex2 = new BABYLON.Texture("./resource/images/LOGO PTS.png", scene);
-    tex2.uScale = 1;
-    tex2.vScale = 1;
+    tex2.uScale = 1.9;
+    tex2.vScale = 1.9;
     tex2.uOffset = 0.75;
-    tex2.vOffset = 0;
+    tex2.vOffset = -0.4;
     tex2.wrapU = BABYLON.Texture.CLAMP_ADDRESSMODE;
     tex2.wrapV = BABYLON.Texture.CLAMP_ADDRESSMODE;
     texturaMitad2.diffuseTexture = tex2;
@@ -155,51 +155,57 @@
         scene.beginAnimation(mitad2, 0, 60, false);
         
         // Después de 2 segundos, hacer desaparecer las mitades y crear la pared con hueco
-        setTimeout(function() {
-            mitad1.setEnabled(false);
-            mitad2.setEnabled(false);
-            //fondo.setEnabled(false);
-            
-            console.log(camera);
-
-            loadBuildingBussines(scene).then((bulding) => {
-                console.log("Edificio Cargado ....");
-                ActionMover1(scene, camera);
-            })
-            // Crear pared con hueco
-            /*const paredHueco1 = createParedConHueco(scene,0,0,8);
-            allScene1Objects.push(paredHueco1);
-            const paredHueco2 = createParedConHueco(scene,10,0,8);
-            allScene1Objects.push(paredHueco2);
-            const paredHueco3 = createParedConHueco(scene,-10,0,8);
-            allScene1Objects.push(paredHueco3);
-            const door1 = createDoorsInteractives(scene,-4,4,-2.5,2.5);
-            allScene1Objects.push(door1);
-            const door2 = createDoorsInteractives(scene,14.5,25.5,6,14);
-            allScene1Objects.push(door2);
-            const door3 = createDoorsInteractives(scene,-24,-15.5,-12.5,-7);
-            allScene1Objects.push(door3);
-            const cars = createAdvancedMovingCars(scene,8).then((cars) => {
-                console.log("Carros listos:", cars);
-                allScene1Objects.push(cars);
-            });
-
-            const city = loadcity(scene).then(building => {
-                console.log("Edificio cargado:", building.name);
-                allScene1Objects.push(building);
-            });
-
-
-            console.log(camera);
-
-           createHexagonoCategoria(scene,camera,"Procesos de Negocio",allScene1Objects,0,new BABYLON.Vector3(-10, 13, 0), new BABYLON.Vector3(-8, 3, 1));
-           createHexagonoCategoria(scene,camera,"E-Comerce y Seguridad",allScene1Objects,1,new BABYLON.Vector3(0, 13, 0), new BABYLON.Vector3(0, 3, 1));
-           createHexagonoCategoria(scene,camera,"Operaciones Comerciales",allScene1Objects,2,new BABYLON.Vector3(10, 13, 0), new BABYLON.Vector3(8, 3, 1));
-
-           console.log("Numero Objetos"+ allScene1Objects.length);*/
-
-
-        }, 2000);
+        setTimeout(function () {
+           
+            let avion; // Declarado fuera para tener acceso global en este scope
+        
+            // Carga del modelo .glb
+            BABYLON.SceneLoader.ImportMesh(
+                "", 
+                "./resource/models/", // Carpeta local
+                "low_poly_airplane.glb", // Archivo del avión
+                scene,
+                function (meshes) {
+                    avion = meshes[0]; // Malla principal
+        
+                    avion.position = rectangulo.position.clone();
+                    avion.scaling = new BABYLON.Vector3(2, 2, 2); // Tamaño
+                    avion.rotation = new BABYLON.Vector3(0, -Math.PI / 2, 0); // Orientación
+        
+                    // Animación de vuelo hacia adelante
+                    const vuelo = new BABYLON.Animation(
+                        "vueloAvion",
+                        "position.z",
+                        30,
+                        BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+                        BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT
+                    );
+                    vuelo.setKeys([
+                        { frame: 0, value: avion.position.z },
+                        { frame: 100, value: avion.position.z - 30 }
+                    ]);
+        
+                    avion.animations.push(vuelo);
+                    scene.beginAnimation(avion, 0, 100, false);
+        
+                    // Esperar a que termine el vuelo (3.5 segundos), luego eliminar avión y cargar escena
+                    setTimeout(() => {
+                        avion.dispose();
+                         // Ocultar las mitades
+                        mitad1.setEnabled(false);
+                        mitad2.setEnabled(false);
+        
+                        loadBuildingBussines(scene).then((building) => {
+                            console.log("Edificio Cargado ....");
+                            ActionMover1(scene, camera);
+                        });
+        
+                    }, 2000); // Tiempo suficiente para que el avión "vuele"
+                }
+            );
+        }, 2000); // Espera 2s después del clic antes de iniciar el proceso
+        
+        
 
        
         
