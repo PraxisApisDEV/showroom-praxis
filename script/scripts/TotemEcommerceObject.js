@@ -39,7 +39,7 @@ const TotemEcommerceObj = function(scene, textDescription, plane, camera, lamp){
     const icon = SvgObject(scene, new BABYLON.Vector3(88.7,4.5,302.2), "images/ECommerce/VentaDigital/ICONO VENTA DIGITAL.svg", {width: 4, height: 4}, new BABYLON.Vector3(0, Math.PI/2, 0))
     const titulo = SvgObject(scene, new BABYLON.Vector3(88.7,3.4,295.2), "images/ECommerce/VentaDigital/TITULO VENTA DIGITAL.svg", {width: 9, height: 1.3}, new BABYLON.Vector3(0, Math.PI/2, 0));
 
-    const logo = ImageObject(scene, "logos/LOGO PTS.png", new BABYLON.Vector3(88.8,-23.5,284.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 5, height: 3});
+    const logo = ImageObject(scene, "logos/LOGO PTS.png", new BABYLON.Vector3(88.8,-23.5,284.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 7.3, height: 1.8});
     const silla = ImageObject(scene, "images/ECommerce/SILLA.png", new BABYLON.Vector3(88.7,-19.5,264.2), 1, new BABYLON.Vector3(0, Math.PI/2, 0), { width: 6, height: 9});
 
     const text = TextObject(scene,textDescription, 23, "white", new BABYLON.Vector3(88.7,-12.5,286.3), new BABYLON.Vector3(0, Math.PI/2, 0), {width: 31, height: 30}, {width:500, height:250});

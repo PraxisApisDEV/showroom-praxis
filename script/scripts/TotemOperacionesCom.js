@@ -24,12 +24,12 @@ const TotemOperacionesComObj = function(scene, textDescription, plane, camera, l
     const icon = SvgObject(scene, new BABYLON.Vector3(-30.6,4.5,590.1), "images/OperacionesComerciales/ICONO PUNTO DE VENTA.svg", {width: 4, height: 4}, new BABYLON.Vector3(0, 0, 0))
     const titulo = SvgObject(scene, new BABYLON.Vector3(-23.6,3.4,590.1), "images/OperacionesComerciales/TITULO PUNTO DE VENTA .svg", {width: 9, height: 1.5}, new BABYLON.Vector3(0, 0, 0));
 
-    const logo = ImageObject(scene, "logos/LOGO PTS.png", new BABYLON.Vector3(-15.6,-23.5,590.1), 1, new BABYLON.Vector3(0, 0, 0), { width: 5, height: 3});
+    const logo = ImageObject(scene, "logos/LOGO PTS.png", new BABYLON.Vector3(-15.6,-23.5,590.1), 1, new BABYLON.Vector3(0, 0, 0), { width: 7.3, height: 1.8});
     const silla = ImageObject(scene, "images/OperacionesComerciales/SILLON.png", new BABYLON.Vector3(6.4,-19.5,590.09), 1, new BABYLON.Vector3(0, 0, 0), { width: 9, height: 9});
 
     const text = TextObject(scene,textDescription, 23, "white", new BABYLON.Vector3(-15.6,-12.5,590.1), new BABYLON.Vector3(0, 0, 0), {width: 31, height: 30}, {width:500, height:250});
 
-    videoActualOC = AddVideo(scene, "Onboarding digital empleados.mp4", { width: 38, height: 17 },new BABYLON.Vector3(-12.6,-10,590.1), new BABYLON.Vector3(0, 0, 0));
+    videoActualOC = AddVideo(scene, "cmpay.mp4", { width: 38, height: 17 },new BABYLON.Vector3(-12.6,-10,590.1), new BABYLON.Vector3(0, 0, 0));
 
     const qr  = ImageObject(scene, "images/OperacionesComerciales/qr.png", new BABYLON.Vector3(-0.6,-21,590.08), 1, new BABYLON.Vector3(0, 0, 0), { width: 5, height: 5});
     const qrfondo  = ImageObject(scene, "images/ProcesosNegocios/Cuadro para QR.png", new BABYLON.Vector3(-0.6,-21,590.08), 0.2, new BABYLON.Vector3(0, 0, 0), { width: 6.3, height: 6.3});
