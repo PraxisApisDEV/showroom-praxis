@@ -95,7 +95,7 @@ const ClicTotem1 = function(plane, scene, allTotemOptions, camera){
                     girarCamaraA(camera, -89, 1).then(() => {
                         const lamp = LampObj(scene, new BABYLON.Vector3(80, 27, 277));//17
                         TotemECommerce(scene, new BABYLON.Vector3(89, -8.5, 312), camera, lamp);
-                        moverCamaraAZoom(camera, new BABYLON.Vector3(58, -8.7, 288), 10, 1).then(() => {
+                        moverCamaraAZoom(camera, new BABYLON.Vector3(61, -8.7, 289), 12, 1).then(() => {
                             girarCamaraA(camera, -14, 1).then(() => {
                                 girarCamaraBetaA(camera, 9, 1).then(() => {
                                     console.log(camera);
@@ -131,7 +131,7 @@ const ClicTotem2 = function(plane, scene, allTotemOptions, camera){
                     girarCamaraA(camera, -89, 1).then(() => {
                         const lamp = LampObj(scene, new BABYLON.Vector3(80, 27, 477));
                         TotemProcesosNeg(scene, new BABYLON.Vector3(89, -8.5, 512), camera, lamp);
-                        moverCamaraAZoom(camera, new BABYLON.Vector3(58, -8.7, 488), 10, 1).then(() => {
+                        moverCamaraAZoom(camera, new BABYLON.Vector3(61, -8.7, 488), 12, 1).then(() => {
                             girarCamaraA(camera, -14, 1).then(() => {
                                 girarCamaraBetaA(camera, 9, 1).then(() => {
                                     console.log(camera);
@@ -163,7 +163,7 @@ const ClicTotem3= function(plane, scene, allTotemOptions, camera){
                 camera.alpha = -1.6251072771252533;
                 camera.beta = 1.461711260451552;
                 OcultarPrimerosObjetos(allTotemOptions);
-                moverCamaraAZoom(camera, new BABYLON.Vector3(-16, -8, 560), 10, 1).then(() => {
+                moverCamaraAZoom(camera, new BABYLON.Vector3(-16, -8, 563), 10, 1).then(() => {
                     TotemOperacionesCom(scene, new BABYLON.Vector3(-41, -8.5, 590.6), camera)
                     girarCamaraBetaA(camera, 0, 1).then(() => {
                         girarCamaraA(camera, -1, 1).then(() => {
