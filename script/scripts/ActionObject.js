@@ -163,7 +163,7 @@ const ClicTotem3= function(plane, scene, allTotemOptions, camera){
                 camera.alpha = -1.6251072771252533;
                 camera.beta = 1.461711260451552;
                 OcultarPrimerosObjetos(allTotemOptions);
-                moverCamaraAZoom(camera, new BABYLON.Vector3(-16, -8, 563), 10, 1).then(() => {
+                moverCamaraAZoom(camera, new BABYLON.Vector3(-18, -8, 563), 10, 1).then(() => {
                     TotemOperacionesCom(scene, new BABYLON.Vector3(-41, -8.5, 590.6), camera)
                     girarCamaraBetaA(camera, 0, 1).then(() => {
                         girarCamaraA(camera, -1, 1).then(() => {
