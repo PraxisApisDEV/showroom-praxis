@@ -8,8 +8,9 @@ window.addEventListener("resize", () => {
     const isVertical = window.innerHeight > window.innerWidth;
 
     if (isVertical) {
-        camera.setPosition(new BABYLON.Vector3(0, 10, -20));
-        camera.fov = 1.2;
+        camera.fov = 1.2; // Campo de visión más amplio
+        camera.radius = 30; // Alejar cámara
+        camera.setPosition(new BABYLON.Vector3(0, 10, -25));
     } else {
         camera.setPosition(new BABYLON.Vector3(0, 5, -10));
         camera.fov = 0.8;

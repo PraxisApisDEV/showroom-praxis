@@ -78,6 +78,7 @@ const TotemEcommerceObj = function(scene, textDescription, plane, camera, lamp){
         svgTextoOpt1, svgIconoOpt1, plusOpt1,
         svgTextoOpt2, svgIconoOpt2, plusOpt2,
         //svgTextoOpt3, svgIconoOpt3, plusOpt3,
+        tituloEC,
         svgTextoOpt4, svgIconoOpt4, plusOpt4,
         svgCuadroTexto, logo, silla,
         text, videoActualEC.plane,
