@@ -1,6 +1,18 @@
 const canvas = document.getElementById("renderCanvas");
 const engine = new BABYLON.Engine(canvas, true);
 
+canvas.addEventListener("click", () => {
+    if (canvas.requestFullscreen) {
+        canvas.requestFullscreen();
+    }
+});
+
+// Redimensionar al cambiar el tamaño de la ventana (incluso en celulares al girar)
+window.addEventListener("resize", function () {
+    engine.resize();
+});
+
+
 
 
 let allScene1Objects = [];
@@ -196,11 +208,23 @@ var createScene = async function() {
         var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0.5,5,-21), scene);
         
         // This targets the camera to scene origin
-        camera.setTarget(new BABYLON.Vector3(0.5,5,0));
+        //camera.setTarget(new BABYLON.Vector3(0.5,5,0));
+
+                // Control táctil
+        camera.panningSensibility = 50;
+        camera.wheelDeltaPercentage = 0.01;
+
+        // Limita el zoom y la rotación vertical
+        camera.lowerRadiusLimit = 5;
+        camera.upperRadiusLimit = 100;
+        camera.lowerBetaLimit = 0.1;
+        camera.upperBetaLimit = Math.PI / 2.2;
 
         scene.activeCamera = camera;
         //camera.attachControl(canvas, true);
         scene.activeCamera.attachControl(canvas, true);
+
+
         return camera;
     }
 
