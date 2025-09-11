@@ -239,7 +239,10 @@ var createScene = async function() {
         const beta = Math.PI/2.1;
         const radius = 17;
         const target = new BABYLON.Vector3(0, 3, 0);
-        const camera = new BABYLON.ArcRotateCamera("Camera", alpha, beta, radius, target, scene);        
+        const camera = new BABYLON.ArcRotateCamera("Camera", alpha, beta, radius, target, scene); 
+        camera.panningSensibility = 100; // más bajo = más suave
+        camera.useNaturalPinchZoom = true;      
+       
 
        if (isVertical) {
             // Ajustar la cámara para modo portrait
