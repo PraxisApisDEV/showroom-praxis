@@ -2,6 +2,20 @@ const canvas = document.getElementById("renderCanvas");
 const engine = new BABYLON.Engine(canvas, true);
 engine.setHardwareScalingLevel(1 / window.devicePixelRatio);
 
+window.addEventListener("resize", () => {
+    engine.resize();
+
+    const isVertical = window.innerHeight > window.innerWidth;
+
+    if (isVertical) {
+        camera.setPosition(new BABYLON.Vector3(0, 10, -20));
+        camera.fov = 1.2;
+    } else {
+        camera.setPosition(new BABYLON.Vector3(0, 5, -10));
+        camera.fov = 0.8;
+    }
+});
+
 const isVertical = window.innerHeight > window.innerWidth;
 
 canvas.addEventListener("click", () => {
@@ -234,24 +248,17 @@ var createScene = async function() {
 
     var createArcRotateCamera = function (scene) {        
         //const alpha =  Math.PI/4;
-        const alpha =  -1.6;
+        const alpha =  Math.PI / 2;
         //const beta = Math.PI/3;
-        const beta = Math.PI/2.1;
-        const radius = 17;
+        const beta = Math.PI / 2.5;
+        const radius = 30;
         const target = new BABYLON.Vector3(0, 3, 0);
         const camera = new BABYLON.ArcRotateCamera("Camera", alpha, beta, radius, target, scene); 
         camera.panningSensibility = 100; // más bajo = más suave
         camera.useNaturalPinchZoom = true;      
        
 
-       if (isVertical) {
-            // Ajustar la cámara para modo portrait
-            camera.setPosition(new BABYLON.Vector3(0, 10, -20)); // más lejos
-            camera.fov = 1.2; // ampliar campo de visión
-        } else {
-            camera.setPosition(new BABYLON.Vector3(0, 5, -10)); // normal
-            camera.fov = 0.8;
-        }
+     
 
         //var camera1 = new BABYLON.ArcRotateCamera("Camera1", -Math.PI / 2, Math.PI / 2, 5, BABYLON.Vector3.Zero(), scene1);
                
