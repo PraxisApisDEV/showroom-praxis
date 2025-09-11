@@ -1,5 +1,6 @@
 const canvas = document.getElementById("renderCanvas");
 const engine = new BABYLON.Engine(canvas, true);
+engine.setHardwareScalingLevel(1 / window.devicePixelRatio);
 
 canvas.addEventListener("click", () => {
     if (canvas.requestFullscreen) {
@@ -11,6 +12,7 @@ canvas.addEventListener("click", () => {
 window.addEventListener("resize", function () {
     engine.resize();
 });
+
 
 
 
